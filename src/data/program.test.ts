@@ -20,3 +20,11 @@ describe("program Nempo", () => {
     expect(geserSlideProgram(5, 1, 38)).toBe(6);
   });
 });
+
+describe("Garut Beans program", () => {
+  it("is listed second and opens its own website under the NEMPO site", () => {
+    expect(PROGRAM_NEMPO[1]?.slug).toBe("garut-beans");
+    expect(cariProgram("garut-beans")?.tautanWeb).toBe("/garut-beans/");
+    expect(cariProgram("garut-beans")?.terkunci).toBe(false);
+  });
+});

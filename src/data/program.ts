@@ -11,6 +11,10 @@ export type ProgramNempo = {
   jumlahSlide: number;
   terkunci: boolean;
   sorotan: string[];
+  /** When set, the card opens this web address in a new tab instead of a slide deck. */
+  tautanWeb?: string;
+  /** Short label for the third info box when the program is a website, e.g. "Situs web". */
+  jenis?: string;
 };
 
 export const PROGRAM_NEMPO: ProgramNempo[] = [
@@ -27,6 +31,22 @@ export const PROGRAM_NEMPO: ProgramNempo[] = [
     jumlahSlide: 38,
     terkunci: true,
     sorotan: ["Pasar UMKM & Kampung Kuliner", "Heritage Stage & Kaulinan", "Duta Pasar Seni & Koin Nempo", "Rundown 3 hari"],
+  },
+  {
+    slug: "garut-beans",
+    judul: "Garut Beans (G-Beans)",
+    tagline: "Kopi spesialti dari lereng gunung Garut",
+    ringkas:
+      "Situs web Garut Beans: katalog kopi Garut, cerita petani dan wilayah asal, paket hadiah, serta wisata kopi yang menghubungkan petani, mitra, dan pembeli.",
+    mitra: "Garut Beans",
+    tahun: "2026",
+    lokasi: "Garut, Jawa Barat",
+    sampul: "/garut-beans/assets/garut-beans-header.webp",
+    jumlahSlide: 0,
+    terkunci: false,
+    sorotan: ["Katalog kopi Garut", "Cerita petani & wilayah", "Paket hadiah kopi", "Wisata kopi"],
+    tautanWeb: "/garut-beans/",
+    jenis: "Situs web",
   },
 ];
 

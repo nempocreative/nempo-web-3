@@ -14,6 +14,7 @@ import { Route as SplatRouteImport } from './routes/$'
 import { Route as BackupRouteImport } from './routes/backup'
 import { Route as BusinessSystemRouteImport } from './routes/business-system'
 import { Route as DesignCreativeRouteImport } from './routes/design-creative'
+import { Route as GarutBeansRouteImport } from './routes/garut-beans'
 import { Route as MerchandiseRouteImport } from './routes/merchandise'
 import { Route as SosmedManagementRouteImport } from './routes/sosmed-management'
 import { Route as TalentRouteImport } from './routes/talent'
@@ -24,6 +25,7 @@ import { Route as ApiSplatRouteImport } from './routes/api/$'
 import { Route as ApiBackupRouteImport } from './routes/api/backup'
 import { Route as CmsIndexRouteImport } from './routes/cms.index'
 import { Route as CmsSplatRouteImport } from './routes/cms.$'
+import { Route as GarutBeansSplatRouteImport } from './routes/garut-beans.$'
 import { Route as ProgramPasarSeniGarutRouteImport } from './routes/program.pasar-seni-garut'
 import { Route as YearBookEventRouteImport } from './routes/year-book.event'
 import { Route as YearBookGengGrupRouteImport } from './routes/year-book.geng-grup'
@@ -67,6 +69,11 @@ const BusinessSystemRoute = BusinessSystemRouteImport.update({
 const DesignCreativeRoute = DesignCreativeRouteImport.update({
   id: '/design-creative',
   path: '/design-creative',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GarutBeansRoute = GarutBeansRouteImport.update({
+  id: '/garut-beans',
+  path: '/garut-beans',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MerchandiseRoute = MerchandiseRouteImport.update({
@@ -118,6 +125,11 @@ const CmsSplatRoute = CmsSplatRouteImport.update({
   id: '/cms/$',
   path: '/cms/$',
   getParentRoute: () => rootRouteImport,
+} as any)
+const GarutBeansSplatRoute = GarutBeansSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => GarutBeansRoute,
 } as any)
 const ProgramPasarSeniGarutRoute = ProgramPasarSeniGarutRouteImport.update({
   id: '/program/pasar-seni-garut',
@@ -234,6 +246,7 @@ export interface FileRoutesByFullPath {
   '/backup': typeof BackupRoute
   '/business-system': typeof BusinessSystemRoute
   '/design-creative': typeof DesignCreativeRoute
+  '/garut-beans': typeof GarutBeansRouteWithChildren
   '/merchandise': typeof MerchandiseRoute
   '/sosmed-management': typeof SosmedManagementRoute
   '/talent': typeof TalentRoute
@@ -243,6 +256,7 @@ export interface FileRoutesByFullPath {
   '/api/$': typeof ApiSplatRoute
   '/api/backup': typeof ApiBackupRoute
   '/cms/$': typeof CmsSplatRoute
+  '/garut-beans/$': typeof GarutBeansSplatRoute
   '/program/pasar-seni-garut': typeof ProgramPasarSeniGarutRoute
   '/year-book/event': typeof YearBookEventRoute
   '/year-book/geng-grup': typeof YearBookGengGrupRoute
@@ -270,6 +284,7 @@ export interface FileRoutesByTo {
   '/backup': typeof BackupRoute
   '/business-system': typeof BusinessSystemRoute
   '/design-creative': typeof DesignCreativeRoute
+  '/garut-beans': typeof GarutBeansRouteWithChildren
   '/merchandise': typeof MerchandiseRoute
   '/sosmed-management': typeof SosmedManagementRoute
   '/talent': typeof TalentRoute
@@ -279,6 +294,7 @@ export interface FileRoutesByTo {
   '/api/$': typeof ApiSplatRoute
   '/api/backup': typeof ApiBackupRoute
   '/cms/$': typeof CmsSplatRoute
+  '/garut-beans/$': typeof GarutBeansSplatRoute
   '/program/pasar-seni-garut': typeof ProgramPasarSeniGarutRoute
   '/year-book/event': typeof YearBookEventRoute
   '/year-book/geng-grup': typeof YearBookGengGrupRoute
@@ -307,6 +323,7 @@ export interface FileRoutesById {
   '/backup': typeof BackupRoute
   '/business-system': typeof BusinessSystemRoute
   '/design-creative': typeof DesignCreativeRoute
+  '/garut-beans': typeof GarutBeansRouteWithChildren
   '/merchandise': typeof MerchandiseRoute
   '/sosmed-management': typeof SosmedManagementRoute
   '/talent': typeof TalentRoute
@@ -316,6 +333,7 @@ export interface FileRoutesById {
   '/api/$': typeof ApiSplatRoute
   '/api/backup': typeof ApiBackupRoute
   '/cms/$': typeof CmsSplatRoute
+  '/garut-beans/$': typeof GarutBeansSplatRoute
   '/program/pasar-seni-garut': typeof ProgramPasarSeniGarutRoute
   '/year-book/event': typeof YearBookEventRoute
   '/year-book/geng-grup': typeof YearBookGengGrupRoute
@@ -345,6 +363,7 @@ export interface FileRouteTypes {
     | '/backup'
     | '/business-system'
     | '/design-creative'
+    | '/garut-beans'
     | '/merchandise'
     | '/sosmed-management'
     | '/talent'
@@ -354,6 +373,7 @@ export interface FileRouteTypes {
     | '/api/$'
     | '/api/backup'
     | '/cms/$'
+    | '/garut-beans/$'
     | '/program/pasar-seni-garut'
     | '/year-book/event'
     | '/year-book/geng-grup'
@@ -381,6 +401,7 @@ export interface FileRouteTypes {
     | '/backup'
     | '/business-system'
     | '/design-creative'
+    | '/garut-beans'
     | '/merchandise'
     | '/sosmed-management'
     | '/talent'
@@ -390,6 +411,7 @@ export interface FileRouteTypes {
     | '/api/$'
     | '/api/backup'
     | '/cms/$'
+    | '/garut-beans/$'
     | '/program/pasar-seni-garut'
     | '/year-book/event'
     | '/year-book/geng-grup'
@@ -417,6 +439,7 @@ export interface FileRouteTypes {
     | '/backup'
     | '/business-system'
     | '/design-creative'
+    | '/garut-beans'
     | '/merchandise'
     | '/sosmed-management'
     | '/talent'
@@ -426,6 +449,7 @@ export interface FileRouteTypes {
     | '/api/$'
     | '/api/backup'
     | '/cms/$'
+    | '/garut-beans/$'
     | '/program/pasar-seni-garut'
     | '/year-book/event'
     | '/year-book/geng-grup'
@@ -454,6 +478,7 @@ export interface RootRouteChildren {
   BackupRoute: typeof BackupRoute
   BusinessSystemRoute: typeof BusinessSystemRoute
   DesignCreativeRoute: typeof DesignCreativeRoute
+  GarutBeansRoute: typeof GarutBeansRouteWithChildren
   MerchandiseRoute: typeof MerchandiseRoute
   SosmedManagementRoute: typeof SosmedManagementRoute
   TalentRoute: typeof TalentRoute
@@ -507,6 +532,13 @@ declare module '@tanstack/react-router' {
       path: '/design-creative'
       fullPath: '/design-creative'
       preLoaderRoute: typeof DesignCreativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/garut-beans': {
+      id: '/garut-beans'
+      path: '/garut-beans'
+      fullPath: '/garut-beans'
+      preLoaderRoute: typeof GarutBeansRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/merchandise': {
@@ -578,6 +610,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/cms/$'
       preLoaderRoute: typeof CmsSplatRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/garut-beans/$': {
+      id: '/garut-beans/$'
+      path: '/$'
+      fullPath: '/garut-beans/$'
+      preLoaderRoute: typeof GarutBeansSplatRouteImport
+      parentRoute: typeof GarutBeansRoute
     }
     '/program/pasar-seni-garut': {
       id: '/program/pasar-seni-garut'
@@ -715,6 +754,18 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface GarutBeansRouteChildren {
+  GarutBeansSplatRoute: typeof GarutBeansSplatRoute
+}
+
+const GarutBeansRouteChildren: GarutBeansRouteChildren = {
+  GarutBeansSplatRoute: GarutBeansSplatRoute,
+}
+
+const GarutBeansRouteWithChildren = GarutBeansRoute._addFileChildren(
+  GarutBeansRouteChildren,
+)
+
 interface WeddingInvitationRouteChildren {
   WeddingInvitationTemaBiruTamanRoute: typeof WeddingInvitationTemaBiruTamanRoute
   WeddingInvitationTemaBiruTamanTanpaFotoRoute: typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
@@ -763,6 +814,7 @@ const rootRouteChildren: RootRouteChildren = {
   BackupRoute: BackupRoute,
   BusinessSystemRoute: BusinessSystemRoute,
   DesignCreativeRoute: DesignCreativeRoute,
+  GarutBeansRoute: GarutBeansRouteWithChildren,
   MerchandiseRoute: MerchandiseRoute,
   SosmedManagementRoute: SosmedManagementRoute,
   TalentRoute: TalentRoute,

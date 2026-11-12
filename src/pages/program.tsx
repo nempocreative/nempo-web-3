@@ -2,14 +2,16 @@ import { Layout } from "@/components/layout";
 import { PartnershipProposalForm } from "@/components/partnership-proposal-form";
 import { SEO } from "@/components/seo";
 import { Link } from "@/lib/wouter";
-import { ArrowRight, CalendarDays, Check, Lock, MapPin, Presentation } from "lucide-react";
+import { ArrowRight, CalendarDays, Check, ExternalLink, Globe, Lock, MapPin, Presentation } from "lucide-react";
 import { PROGRAM_NEMPO, type ProgramNempo } from "@/data/program";
 
 function InfoProgram({ p }: { p: ProgramNempo }) {
   const info = [
     { Icon: CalendarDays, label: "Tahun", value: p.tahun },
     { Icon: MapPin, label: "Lokasi", value: p.lokasi },
-    { Icon: Presentation, label: "Isi", value: `${p.jumlahSlide} slide` },
+    p.tautanWeb
+      ? { Icon: Globe, label: "Isi", value: p.jenis ?? "Situs web" }
+      : { Icon: Presentation, label: "Isi", value: `${p.jumlahSlide} slide` },
   ];
   return (
     <dl className="grid grid-cols-3 gap-2">
@@ -25,12 +27,28 @@ function InfoProgram({ p }: { p: ProgramNempo }) {
   );
 }
 
+const kelasKartu =
+  "group grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-xl md:grid-cols-[1.05fr_1fr]";
+
 function KartuProgramUtama({ p }: { p: ProgramNempo }) {
+  if (p.tautanWeb) {
+    // Website programs open in a new tab so the Nempo program page stays where it was.
+    return (
+      <a href={p.tautanWeb} target="_blank" rel="noopener noreferrer" className={kelasKartu}>
+        <IsiKartuProgram p={p} />
+      </a>
+    );
+  }
   return (
-    <Link
-      href={`/program/${p.slug}`}
-      className="group grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-xl md:grid-cols-[1.05fr_1fr]"
-    >
+    <Link href={`/program/${p.slug}`} className={kelasKartu}>
+      <IsiKartuProgram p={p} />
+    </Link>
+  );
+}
+
+function IsiKartuProgram({ p }: { p: ProgramNempo }) {
+  return (
+    <>
       <div className="relative aspect-video overflow-hidden bg-psg-bg md:aspect-auto md:min-h-full">
         <img
           src={p.sampul}
@@ -71,12 +89,21 @@ function KartuProgramUtama({ p }: { p: ProgramNempo }) {
 
         <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-slate-100 pt-5">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-bold text-white transition group-hover:bg-[#0d6560]">
-            Buka proposal <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            {p.tautanWeb ? (
+              <>
+                Buka web <ExternalLink className="h-4 w-4" />
+              </>
+            ) : (
+              <>
+                Buka proposal <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+              </>
+            )}
           </span>
           {p.terkunci && <span className="text-xs text-slate-500">Kata sandi diberikan oleh tim Nempo</span>}
+          {p.tautanWeb && <span className="text-xs text-slate-500">Terbuka di tab baru</span>}
         </div>
       </div>
-    </Link>
+    </>
   );
 }
 
@@ -106,7 +133,7 @@ export default function ProgramPage() {
           {utama && <KartuProgramUtama p={utama} />}
 
           {lainnya.length > 0 && (
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-6">
               {lainnya.map((p) => (
                 <KartuProgramUtama key={p.slug} p={p} />
               ))}
