@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { TrendingUp, Sparkles, Users, Landmark, PartyPopper } from 'lucide-react';
+import { TrendingUp, Lightbulb, Users, Landmark, PartyPopper } from 'lucide-react';
 import SlideFooter from '../components/SlideFooter';
 import SlideHeader from '../components/SlideHeader';
 
@@ -7,7 +7,7 @@ const base = '/media/pasar-seni-garut/';
 
 const pillars = [
   { no: '01', Icon: TrendingUp, name: 'Pengembangan\nUMKM',           accent: 'Ekosistem bisnis lokal yang tumbuh' },
-  { no: '02', Icon: Sparkles,   name: 'Ekonomi Kreatif\nLokal',        accent: 'Inovasi & nilai tambah produk daerah' },
+  { no: '02', Icon: Lightbulb,  name: 'Ekonomi Kreatif\nLokal',        accent: 'Inovasi & nilai tambah produk daerah' },
   { no: '03', Icon: Users,      name: 'Aktivitas\nKomunitas',           accent: 'Keterlibatan langsung masyarakat' },
   { no: '04', Icon: Landmark,   name: 'Pelestarian\nBudaya Daerah',    accent: 'Warisan hidup yang terus bernapas' },
   { no: '05', Icon: PartyPopper, name: 'Festival\nMasyarakat',           accent: 'Perayaan bersama yang dikenang' },

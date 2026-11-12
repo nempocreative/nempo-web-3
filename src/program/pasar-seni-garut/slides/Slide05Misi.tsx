@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Megaphone, Landmark, TrendingUp, Handshake, Sparkles } from 'lucide-react';
+import { Megaphone, Landmark, TrendingUp, Handshake, Heart } from 'lucide-react';
 import SlideFooter from '../components/SlideFooter';
 import SlideHeader from '../components/SlideHeader';
 
@@ -10,7 +10,7 @@ const missions = [
   { no: '02', Icon: Landmark,   text: 'Mengangkat budaya dan tradisi masyarakat Garut' },
   { no: '03', Icon: TrendingUp, text: 'Mendorong pertumbuhan ekonomi kreatif' },
   { no: '04', Icon: Handshake,  text: 'Menjadi wadah kolaborasi komunitas' },
-  { no: '05', Icon: Sparkles,   text: 'Menciptakan pengalaman festival yang unik dan berkesan' },
+  { no: '05', Icon: Heart,      text: 'Menciptakan pengalaman festival yang unik dan berkesan' },
 ];
 
 export default function Slide05Misi() {
