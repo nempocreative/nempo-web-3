@@ -4,11 +4,11 @@ import { NempoShell } from "@/components/nempo-shell";
 export const Route = createFileRoute("/program/pasar-seni-garut")({
   head: () => ({
     meta: [
-      { title: "Pasar Seni Garut 2027 — Proposal Program Nempo Garut × ESSE" },
+      { title: "Pasar Seni Garut 2027 — Proposal Program Nempo Garut" },
       { name: "description", content: "Proposal kolaborasi Pasar Seni Garut 2027: festival UMKM, budaya, dan komunitas bernuansa pasar rakyat tempo dulu. Dibuka dengan kata sandi." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Pasar Seni Garut 2027 — Juara dari Pasar Rakyat" },
-      { property: "og:description", content: "Proposal program Nempo Garut × ESSE untuk festival budaya, UMKM, dan komunitas kreatif di Garut." },
+      { property: "og:title", content: "Pasar Seni Garut 2027 — Karya dari Pasar Rakyat" },
+      { property: "og:description", content: "Proposal program Nempo Garut untuk festival budaya, UMKM, dan komunitas kreatif di Garut." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

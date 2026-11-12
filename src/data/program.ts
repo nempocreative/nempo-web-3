@@ -17,16 +17,16 @@ export const PROGRAM_NEMPO: ProgramNempo[] = [
   {
     slug: "pasar-seni-garut",
     judul: "Pasar Seni Garut 2027",
-    tagline: "Juara dari Pasar Rakyat — Dari Tradisi Lahir Juara",
+    tagline: "Karya dari Pasar Rakyat — Dari Tradisi Lahir Karya",
     ringkas:
       "Festival UMKM, budaya, dan komunitas yang menghidupkan lagi suasana pasar rakyat tempo dulu: kuliner tradisional, kaulinan barudak, panggung seni, dan produk kreatif lokal Garut.",
-    mitra: "Nempo Garut × ESSE",
+    mitra: "Nempo Garut",
     tahun: "2027",
     lokasi: "Garut, Jawa Barat",
     sampul: "/media/pasar-seni-garut/cover-hero.webp",
     jumlahSlide: 38,
     terkunci: true,
-    sorotan: ["Pasar UMKM & Kampung Kuliner", "Heritage Stage & Kaulinan", "Duta Pasar Seni & Koin Juara", "Rundown 3 hari"],
+    sorotan: ["Pasar UMKM & Kampung Kuliner", "Heritage Stage & Kaulinan", "Duta Pasar Seni & Koin Nempo", "Rundown 3 hari"],
   },
 ];
 

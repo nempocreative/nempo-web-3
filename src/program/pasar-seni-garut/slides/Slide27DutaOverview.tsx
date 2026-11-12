@@ -235,7 +235,7 @@ export default function Slide27DutaOverview() {
             ? 'fadeIn27 0.5s ease 0.38s both, subtitleDrift27 4s ease-in-out 1.5s infinite'
             : 'none',
         }}>
-          "Wajah Para Juara Lokal"
+          "Wajah Para Pelaku Lokal"
         </p>
 
         {/* Tujuan label */}

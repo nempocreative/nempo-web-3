@@ -30,7 +30,7 @@ const sparks = [
   { left:'30%', top:'85%', dur:'4.5s', delay:'2.4s' },
 ];
 
-export default function Slide14NilaiJuara() {
+export default function Slide14NilaiSponsor() {
   const [go,  setGo]  = useState(false);
   const [hov, setHov] = useState<number | null>(null);
 
@@ -98,7 +98,7 @@ export default function Slide14NilaiJuara() {
           50%  { background-position:100% 50%; }
           100% { background-position:0%   50%; }
         }
-        .esse-text14 {
+        .sponsor-text14 {
           background: linear-gradient(90deg,
             #c8860a 0%, #f5c842 22%, #fffbe8 40%, #D4A017 58%, #f0b429 80%, #c8860a 100%
           );
@@ -190,7 +190,7 @@ export default function Slide14NilaiJuara() {
           animation: go ? 'slideL14 0.7s cubic-bezier(0.22,1,0.36,1) 0.18s both' : 'none',
         }}>
           <span style={{ color:'rgba(245,230,200,0.97)' }}>Nilai yang Diberikan untuk </span>
-          <span className="esse-text14">Juara</span>
+          <span className="sponsor-text14">Sponsor</span>
         </h2>
 
         {/* Subtitle */}
@@ -201,7 +201,7 @@ export default function Slide14NilaiJuara() {
           opacity: go ? 1 : 0,
           animation: go ? 'slideU14 0.6s ease 0.28s both' : 'none',
         }}>
-          Bukan sekadar ruang branding — Juara hadir dalam aktivitas masyarakat melalui pendekatan budaya dan komunitas. Kehadiran brand menjadi bagian dari pengalaman langsung pengunjung.
+          Bukan sekadar ruang branding — sponsor hadir dalam aktivitas masyarakat melalui pendekatan budaya dan komunitas. Kehadiran brand menjadi bagian dari pengalaman langsung pengunjung.
         </p>
 
         {/* ── 5-pillar cards ── */}

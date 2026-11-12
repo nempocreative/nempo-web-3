@@ -114,7 +114,7 @@ export default function Slide19ProgramAward() {
         }
 
         /* ── right panel vertical text ── */
-        @keyframes juaraPulse19 {
+        @keyframes awardPulse19 {
           0%,100% { opacity:0.12; }
           50%     { opacity:0.22; }
         }
@@ -224,7 +224,7 @@ export default function Slide19ProgramAward() {
           opacity: go ? 1 : 0,
           animation: go ? 'slideL19 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s both' : 'none',
         }}>
-          <span style={{ color:'rgba(245,230,200,0.97)' }}>JUARA LOCAL<br /></span>
+          <span style={{ color:'rgba(245,230,200,0.97)' }}>LOCAL<br /></span>
           <span className="champ-text19">CHAMPION AWARDS</span>
         </h2>
 
@@ -348,15 +348,15 @@ export default function Slide19ProgramAward() {
           background:'linear-gradient(to bottom, transparent, rgba(212,160,23,0.35) 30%, rgba(212,160,23,0.35) 70%, transparent)',
         }} />
 
-        {/* Vertical "JUARA" text */}
+        {/* Vertical "AWARDS" text */}
         <p style={{
           fontFamily:'var(--font-display,serif)', fontWeight:900,
           color:'rgba(212,160,23,0.15)', lineHeight:0.9,
           userSelect:'none', writingMode:'vertical-rl',
           transform:'rotate(180deg)', fontSize:'9cqw',
-          animation:'juaraPulse19 4s ease-in-out infinite',
+          animation:'awardPulse19 4s ease-in-out infinite',
           letterSpacing:'-0.02em',
-        }}>JUARA</p>
+        }}>AWARDS</p>
 
         {/* Center divider */}
         <div style={{

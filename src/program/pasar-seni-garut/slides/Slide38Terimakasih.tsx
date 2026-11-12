@@ -174,7 +174,7 @@ export default function Slide38Terimakasih() {
           opacity: go ? 1 : 0,
           animation: go ? 'fadeUp38 0.6s ease 0.4s both' : 'none',
         }}>
-          Dari Juara Untuk Para Juara
+          Dari Garut Untuk Garut
         </p>
 
         {/* Gold rule */}

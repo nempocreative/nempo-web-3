@@ -19,7 +19,7 @@ const points = [
   {
     no: '03',
     Icon: Handshake,
-    text: 'Nempo Garut mengundang Juara sebagai mitra utama festival',
+    text: 'Nempo Garut membuka kesempatan bagi brand menjadi mitra utama festival',
   },
   {
     no: '04',
@@ -239,7 +239,7 @@ export default function Slide02ExecutiveSummary() {
           animation: go ? 'quoteUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.25s both' : 'none',
         }}>
           <img
-            src={`${base}pasar-seni-emblem.webp`}
+            src={`${base}pasar-seni-emblem-nempo.webp`}
             crossOrigin="anonymous"
             style={{
               maxWidth: '100%',

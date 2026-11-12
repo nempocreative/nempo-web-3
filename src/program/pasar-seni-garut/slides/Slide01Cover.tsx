@@ -312,7 +312,7 @@ export default function Slide01Cover() {
           opacity: go ? 1 : 0,
           animation: go ? 'fadeUp01 0.6s ease 0.25s both' : 'none',
         }}>
-          #PasarParaJuara
+          #PasarRakyatGarut
         </p>
 
         {/* Main title */}
@@ -342,7 +342,7 @@ export default function Slide01Cover() {
             fontFamily:'var(--font-display,serif)', fontStyle:'italic',
             color:'#D4A017', fontSize:'2.2cqw',
           }}>
-            Juara × Nempo Garut
+            Dipersembahkan Nempo Garut
           </p>
           <div style={{
             width:'6cqw', height:'0.18cqh', background:'#D4A017',
