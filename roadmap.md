@@ -16,3 +16,6 @@
 - [x] Program: halaman /program dengan Pasar Seni Garut 2027 (38 slide dari repo Seni-Pasar-Kreatif-8), dibuka pakai kata sandi
 
 - [x] Program Pasar Seni Garut: hapus semua sebutan "ESSE" dan "Juara" dari slide (teks, judul, gambar, metadata)
+
+- [x] Program Pasar Seni Garut: semua tahun jadi 2027, tanggal jadi "Tanggal menyusul", tempat tetap "Ciplaz Garut (Opsional)"
+- [x] Program Pasar Seni Garut: hapus semua tanda bintang (ikon Star/Sparkles, glyph ★) dari slide
