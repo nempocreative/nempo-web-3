@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { interestOptions, originOptions } from "../data/community-recruitment";
 
-const migration = readFileSync(resolve(process.cwd(), "drizzle/migrations/0002_restrict_selected_public_access_policies.sql"), "utf8");
+const migration = readFileSync(resolve(process.cwd(), "docs/schema-baseline/0003_restrict_selected_public_access_policies.sql"), "utf8");
 
 describe("selected public access policy regression", () => {
   it("validates submissions while retaining the existing form choices", () => {
