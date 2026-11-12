@@ -47,9 +47,9 @@
     {
       "capability": "records: other content tables",
       "source": "old project Lovable Cloud database",
-      "outcome": "migrate",
-      "status": "pending",
-      "next_action": "owner exports tables as CSV/JSON"
+      "outcome": "skip",
+      "status": "accepted",
+      "next_action": "owner declined: old database was empty and data is not needed"
     },
     {
       "capability": "auth identities (CMS admins)",
@@ -83,8 +83,8 @@
       "capability": "storage: yearbook-moments private bucket",
       "source": "src/lib/yearbook-photo.functions.ts",
       "outcome": "migrate",
-      "status": "implemented",
-      "next_action": "bucket created; old uploaded photos need export from old project"
+      "status": "verified",
+      "next_action": "bucket created; old files not needed (owner declined data import)"
     },
     {
       "capability": "hosting lock (cms/backup preview-only)",
