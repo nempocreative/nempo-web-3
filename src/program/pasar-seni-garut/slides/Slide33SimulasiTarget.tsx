@@ -423,7 +423,7 @@ export default function Slide33SimulasiTarget() {
       }} />
 
       {/* ══════════════════════════════════════════
-          RIGHT — Target 2026
+          RIGHT — Target 2027
       ══════════════════════════════════════════ */}
       <div style={{
         display: 'flex', flexDirection: 'column', flex: 1,
@@ -436,7 +436,7 @@ export default function Slide33SimulasiTarget() {
             fontFamily: 'var(--font-body,sans-serif)', fontSize: '0.96cqw',
             color: 'rgba(212,160,23,0.70)', textTransform: 'uppercase',
             letterSpacing: '0.28em', animation: 'labelBreath33 4s ease-in-out 1.5s infinite',
-          }}>Target 2026</span>
+          }}>Target 2027</span>
           <div style={{
             flex: 1, height: '0.1cqh',
             background: 'linear-gradient(to right, rgba(212,160,23,0.40), transparent)',

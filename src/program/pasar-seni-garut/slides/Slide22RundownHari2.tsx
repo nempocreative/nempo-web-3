@@ -213,7 +213,7 @@ export default function Slide22RundownHari2() {
           color:'rgba(212,160,23,0.65)', textTransform:'uppercase',
           letterSpacing:'0.25em', fontSize:'0.85cqw', marginBottom:'1.5cqh',
           position:'relative',
-        }}>26 September 2026</p>
+        }}>Tanggal menyusul</p>
 
         {/* Accent line */}
         <div style={{

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Store, TrendingUp, Users, Sparkles } from 'lucide-react';
+import { Store, TrendingUp, Users, Compass } from 'lucide-react';
 import SlideFooter from '../components/SlideFooter';
 import SlideHeader from '../components/SlideHeader';
 
@@ -84,7 +84,7 @@ const reasons = [
     no: '04',
     Icon: () => (
       <IconBox animClass="icon-spin" glowDelay="1.8s" icon={
-        <Sparkles size="1.5cqw" color="#D4A017" strokeWidth={1.5} />
+        <Compass size="1.5cqw" color="#D4A017" strokeWidth={1.5} />
       } />
     ),
     headline: 'Peluang Festival|Autentik',

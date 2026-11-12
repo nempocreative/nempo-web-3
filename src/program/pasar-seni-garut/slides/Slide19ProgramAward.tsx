@@ -11,7 +11,7 @@ const awards = [
   { no: '04', title: 'Creative Market Champion'   },
   { no: '05', title: "People's Choice Champion"   },
   { no: '06', title: 'Community Champion'         },
-  { no: '07', title: 'Pasar Seni Champion 2026'   },
+  { no: '07', title: 'Pasar Seni Champion 2027'   },
 ];
 
 /* ambient orbs */

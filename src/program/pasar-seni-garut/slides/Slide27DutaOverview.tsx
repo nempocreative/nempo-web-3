@@ -222,7 +222,7 @@ export default function Slide27DutaOverview() {
           animation: go ? 'fadeUp27 0.65s cubic-bezier(0.22,1,0.36,1) 0.22s both' : 'none',
         }}>
           Duta Pasar Seni<br />
-          <span style={{ color: '#D4A017' }}>Garut 2026</span>
+          <span style={{ color: '#D4A017' }}>Garut 2027</span>
         </h2>
 
         {/* Subtitle */}
@@ -457,7 +457,7 @@ export default function Slide27DutaOverview() {
           opacity: go ? 1 : 0,
           animation: go ? 'fadeIn27 0.4s ease 1.3s both' : 'none',
         }}>
-          Pasar Seni Garut 2026
+          Pasar Seni Garut 2027
         </p>
       </div>
 

@@ -13,7 +13,7 @@ const categories = [
   { no: '06', kategori: "People's Choice Champion", penilaian: 'Voting pengunjung'             },
 ];
 
-const grand = { kategori: 'Grand Champion Pasar Seni Garut 2026', penilaian: 'Pemenang Umum Festival' };
+const grand = { kategori: 'Grand Champion Pasar Seni Garut 2027', penilaian: 'Pemenang Umum Festival' };
 
 /* ambient orbs */
 const orbs = [
@@ -134,16 +134,6 @@ export default function Slide24KategoriAwards() {
             background: linear-gradient(90deg, rgba(212,160,23,0.24) 0%, rgba(212,160,23,0.09) 100%);
           }
         }
-        @keyframes starSpin24 {
-          0%   { transform:rotate(0deg)   scale(1); }
-          50%  { transform:rotate(180deg) scale(1.3); }
-          100% { transform:rotate(360deg) scale(1); }
-        }
-        @keyframes starFloat24 {
-          0%,100% { transform:translateY(0); }
-          50%     { transform:translateY(-4px); }
-        }
-
         /* ── right panel ── */
         @keyframes champPulse24 {
           0%,100% { opacity:0.09; }
@@ -258,7 +248,7 @@ export default function Slide24KategoriAwards() {
             animation: go ? 'slideL24 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s both' : 'none',
           }}>
             <span style={{ color:'rgba(245,230,200,0.97)' }}>Local Champion<br /></span>
-            <span className="awards-text24">Awards 2026</span>
+            <span className="awards-text24">Awards 2027</span>
           </h2>
 
           {/* Table header */}
@@ -369,17 +359,6 @@ export default function Slide24KategoriAwards() {
                 animation:'shimmer24 3s ease-in-out infinite',
               }} />
 
-              {/* ★ star */}
-              <p style={{
-                fontFamily:'var(--font-display,serif)', fontWeight:900,
-                fontSize:'1.4cqw', lineHeight:1,
-                color:'#D4A017',
-                animation: hov === 99
-                  ? 'starSpin24 1.2s ease-in-out infinite'
-                  : 'starFloat24 2.5s ease-in-out infinite',
-                position:'relative',
-              }}>★</p>
-
               {/* Grand Champion title */}
               <p style={{
                 fontFamily:'var(--font-display,serif)', fontWeight:700,
@@ -450,7 +429,7 @@ export default function Slide24KategoriAwards() {
             color:'rgba(212,160,23,0.42)', letterSpacing:'0.3em',
             textTransform:'uppercase', fontSize:'0.75cqw',
             writingMode:'vertical-rl', transform:'rotate(180deg)',
-          }}>Champion Awards 2026</p>
+          }}>Champion Awards 2027</p>
         </div>
       </div>
 

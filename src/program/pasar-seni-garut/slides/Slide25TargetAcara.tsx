@@ -318,7 +318,7 @@ export default function Slide25TargetAcara() {
           animation: go ? 'slideL25 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s both' : 'none',
         }}>
           <span style={{ color:'rgba(245,230,200,0.97)' }}>Pasar Seni Garut </span>
-          <span className="garut-text25">2026</span>
+          <span className="garut-text25">2027</span>
         </h2>
 
         {/* Table header */}

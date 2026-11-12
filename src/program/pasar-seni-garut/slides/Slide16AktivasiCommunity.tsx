@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Mic2, Hammer, MessageSquare, Sparkles, Camera, Share2, Heart } from 'lucide-react';
+import { Mic2, Hammer, MessageSquare, Handshake, Camera, Share2, Heart } from 'lucide-react';
 import SlideFooter from '../components/SlideFooter';
 import SlideHeader from '../components/SlideHeader';
 
@@ -9,7 +9,7 @@ const communityItems = [
   { Icon: Mic2,          label: 'Talkshow'           },
   { Icon: Hammer,        label: 'Workshop'            },
   { Icon: MessageSquare, label: 'Diskusi Kreatif'     },
-  { Icon: Sparkles,      label: 'Aktivasi Komunitas'  },
+  { Icon: Handshake,     label: 'Aktivasi Komunitas'  },
 ];
 
 const photoItems = [

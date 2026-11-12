@@ -150,7 +150,7 @@ export default function Slide38Terimakasih() {
             color:'rgba(212,160,23,0.82)', letterSpacing:'0.35em',
             textTransform:'uppercase', fontSize:'0.9cqw', fontWeight:600,
           }}>
-            Proposal Kolaborasi · Pasar Seni Garut 2026
+            Proposal Kolaborasi · Pasar Seni Garut 2027
           </span>
         </div>
 
@@ -205,7 +205,7 @@ export default function Slide38Terimakasih() {
           opacity: go ? 1 : 0,
           animation: go ? 'fadeUp38 0.6s ease 0.7s both' : 'none',
         }}>
-          Sampai bertemu di Pasar Seni Garut 2026
+          Sampai bertemu di Pasar Seni Garut 2027
         </p>
       </div>
 

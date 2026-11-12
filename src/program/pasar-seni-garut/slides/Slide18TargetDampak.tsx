@@ -435,7 +435,7 @@ export default function Slide18TargetDampak() {
             fontFamily:'var(--font-body,sans-serif)',
             color:'rgba(154,122,90,0.75)', fontSize:'1.2cqw',
             letterSpacing:'0.1em', marginTop:'0.4cqh',
-          }}>GARUT 2026</p>
+          }}>GARUT 2027</p>
         </div>
       </div>
 
