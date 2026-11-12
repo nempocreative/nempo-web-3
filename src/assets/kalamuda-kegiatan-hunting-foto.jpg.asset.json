@@ -1,11 +1,11 @@
 {
-  "asset_id": "b6c5573d-ec53-4ccb-a129-306fe3ae47d5",
-  "content_type": "image/jpeg",
-  "created_at": "2026-11-12T07:10:32Z",
+  "version": 1,
+  "asset_id": "91138eab-ee6c-48ba-ab6e-fc306e828d60",
+  "project_id": "d4a90b77-7071-4230-bb91-40034d1c19ae",
+  "url": "/__l5e/assets-v1/91138eab-ee6c-48ba-ab6e-fc306e828d60/kalamuda-kegiatan-hunting-foto.jpg",
+  "r2_key": "a/v1/d4a90b77-7071-4230-bb91-40034d1c19ae/91138eab-ee6c-48ba-ab6e-fc306e828d60/kalamuda-kegiatan-hunting-foto.jpg",
   "original_filename": "kalamuda-kegiatan-hunting-foto.jpg",
-  "project_id": "2d89d55e-4ccd-4b31-8390-2da830ddaa7a",
-  "r2_key": "a/v1/2d89d55e-4ccd-4b31-8390-2da830ddaa7a/b6c5573d-ec53-4ccb-a129-306fe3ae47d5/kalamuda-kegiatan-hunting-foto.jpg",
   "size": 285741,
-  "url": "/__l5e/assets-v1/b6c5573d-ec53-4ccb-a129-306fe3ae47d5/kalamuda-kegiatan-hunting-foto.jpg",
-  "version": 1
+  "content_type": "image/jpeg",
+  "created_at": "2026-11-12T20:41:59Z"
 }

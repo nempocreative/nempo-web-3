@@ -1,11 +1,11 @@
 {
-  "asset_id": "e01542a6-c53f-4f13-ac3b-6e9c63962deb",
-  "content_type": "image/jpeg",
-  "created_at": "2026-11-12T07:10:30Z",
+  "version": 1,
+  "asset_id": "3f8a5b27-0b0b-415f-b8c7-7acdd46642f4",
+  "project_id": "d4a90b77-7071-4230-bb91-40034d1c19ae",
+  "url": "/__l5e/assets-v1/3f8a5b27-0b0b-415f-b8c7-7acdd46642f4/kalamuda-kegiatan-basecamp.jpg",
+  "r2_key": "a/v1/d4a90b77-7071-4230-bb91-40034d1c19ae/3f8a5b27-0b0b-415f-b8c7-7acdd46642f4/kalamuda-kegiatan-basecamp.jpg",
   "original_filename": "kalamuda-kegiatan-basecamp.jpg",
-  "project_id": "2d89d55e-4ccd-4b31-8390-2da830ddaa7a",
-  "r2_key": "a/v1/2d89d55e-4ccd-4b31-8390-2da830ddaa7a/e01542a6-c53f-4f13-ac3b-6e9c63962deb/kalamuda-kegiatan-basecamp.jpg",
   "size": 524998,
-  "url": "/__l5e/assets-v1/e01542a6-c53f-4f13-ac3b-6e9c63962deb/kalamuda-kegiatan-basecamp.jpg",
-  "version": 1
+  "content_type": "image/jpeg",
+  "created_at": "2026-11-12T20:41:56Z"
 }
