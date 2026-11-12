@@ -14,3 +14,5 @@
 - [x] Ucapan Spesial: pilihan desain feed Instagram selain situs
 
 - [x] Program: halaman /program dengan Pasar Seni Garut 2027 (38 slide dari repo Seni-Pasar-Kreatif-8), dibuka pakai kata sandi
+
+- [ ] Program Pasar Seni Garut: hapus semua sebutan "ESSE" dan "Juara" dari slide (teks, judul, gambar, metadata)
