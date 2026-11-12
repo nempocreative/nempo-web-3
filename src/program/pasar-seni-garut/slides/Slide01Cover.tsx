@@ -324,7 +324,7 @@ export default function Slide01Cover() {
           opacity: go ? 1 : 0,
           animation: go ? 'popIn01 0.85s cubic-bezier(0.22,1,0.36,1) 0.32s both' : 'none',
         }}>
-          Pasar Seni<br />Garut 2026
+          Pasar Seni<br />Garut 2027
         </h1>
 
         {/* Divider + subtitle */}
@@ -381,7 +381,7 @@ export default function Slide01Cover() {
               fontFamily:'var(--font-body,sans-serif)',
               color:'rgba(245,230,200,0.6)', fontSize:'1.3cqw', letterSpacing:'0.05em',
             }}>
-              25–27 September 2026
+              Tanggal menyusul
             </span>
           </div>
           <div style={{ width:'0.12cqw', height:'2cqh', background:'rgba(212,160,23,0.4)' }} />

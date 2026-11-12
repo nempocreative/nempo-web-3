@@ -134,16 +134,6 @@ export default function Slide24KategoriAwards() {
             background: linear-gradient(90deg, rgba(212,160,23,0.24) 0%, rgba(212,160,23,0.09) 100%);
           }
         }
-        @keyframes starSpin24 {
-          0%   { transform:rotate(0deg)   scale(1); }
-          50%  { transform:rotate(180deg) scale(1.3); }
-          100% { transform:rotate(360deg) scale(1); }
-        }
-        @keyframes starFloat24 {
-          0%,100% { transform:translateY(0); }
-          50%     { transform:translateY(-4px); }
-        }
-
         /* ── right panel ── */
         @keyframes champPulse24 {
           0%,100% { opacity:0.09; }
@@ -368,17 +358,6 @@ export default function Slide24KategoriAwards() {
                 background:'linear-gradient(110deg, transparent 25%, rgba(212,160,23,0.07) 50%, transparent 75%)',
                 animation:'shimmer24 3s ease-in-out infinite',
               }} />
-
-              {/* ★ star */}
-              <p style={{
-                fontFamily:'var(--font-display,serif)', fontWeight:900,
-                fontSize:'1.4cqw', lineHeight:1,
-                color:'#D4A017',
-                animation: hov === 99
-                  ? 'starSpin24 1.2s ease-in-out infinite'
-                  : 'starFloat24 2.5s ease-in-out infinite',
-                position:'relative',
-              }}>★</p>
 
               {/* Grand Champion title */}
               <p style={{

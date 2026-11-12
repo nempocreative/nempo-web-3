@@ -13,8 +13,8 @@ const penilaian = [
 ];
 
 const gelar = [
-  { title: 'Duta Pasar Seni Garut Putra 2026', main: true },
-  { title: 'Duta Pasar Seni Garut Putri 2026', main: true },
+  { title: 'Duta Pasar Seni Garut Putra 2027', main: true },
+  { title: 'Duta Pasar Seni Garut Putri 2027', main: true },
   { title: 'Duta Favorit',         main: false },
   { title: 'Duta Media Sosial',    main: false },
   { title: 'Duta Inspiratif',      main: false },

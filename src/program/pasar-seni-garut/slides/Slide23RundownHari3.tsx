@@ -14,7 +14,7 @@ const schedule = [
   { time: '14.00 – 15.00', activity: 'Parade UMKM & Komunitas',                              location: 'Area Festival'},
   { time: '15.00 – 16.00', activity: 'Penghitungan Voting & Persiapan Awarding',             location: 'Main Stage'   },
   { time: '16.00 – 17.00', activity: 'Pertunjukan Seni Budaya',                              location: 'Main Stage'   },
-  { time: '17.00 – 18.30', activity: 'Local Champion Awards 2026',                      location: 'Main Stage'   },
+  { time: '17.00 – 18.30', activity: 'Local Champion Awards 2027',                      location: 'Main Stage'   },
   { time: '18.30 – 19.00', activity: 'Penyerahan Trophy Bergilir Pasar Seni Garut',         location: 'Main Stage'   },
   { time: '19.00 – 20.00', activity: 'Penampilan Guest Star',                                location: 'Main Stage'   },
   { time: '20.00 – 20.30', activity: 'Pengumuman Pasar Seni Garut 2027',                     location: 'Main Stage'   },
@@ -243,7 +243,7 @@ export default function Slide23RundownHari3() {
           color:'rgba(212,160,23,0.65)', textTransform:'uppercase',
           letterSpacing:'0.25em', fontSize:'0.85cqw', marginBottom:'1.5cqh',
           position:'relative',
-        }}>27 September 2026</p>
+        }}>Tanggal menyusul</p>
 
         {/* Accent line */}
         <div style={{
