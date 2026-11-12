@@ -1,0 +1,24 @@
+{
+  "source": "github:nempocreative/nempo-web-2",
+  "scope": "Full NEMPO Garut organizer site, /cms admin, program decks, yearbook portfolios, database and admin users",
+  "capabilities": [
+    {"capability": "code: pages, CMS app, components, data, styles", "source": "src/", "outcome": "migrate", "status": "pending", "next_action": "copy source"},
+    {"capability": "routes", "source": "src/routes + src/nempo-app.tsx", "outcome": "migrate", "status": "pending", "next_action": "copy and verify load"},
+    {"capability": "public files", "source": "public/", "outcome": "migrate", "status": "pending", "next_action": "copy"},
+    {"capability": "media pointers (.asset.json)", "source": "src/assets (4 pointers from old project storage)", "outcome": "migrate", "status": "pending", "next_action": "re-upload into this project's storage"},
+    {"capability": "schema (22 tables, app_role, has_role, admin trigger, policies)", "source": "docs/schema-baseline/0000-0003", "outcome": "migrate", "status": "pending", "next_action": "apply to Lovable Cloud"},
+    {"capability": "records: MusiComedy Night event", "source": "baseline seed", "outcome": "migrate", "status": "pending", "next_action": "seed in migration"},
+    {"capability": "records: other content tables", "source": "old project Lovable Cloud database", "outcome": "migrate", "status": "pending", "next_action": "owner exports tables as CSV/JSON"},
+    {"capability": "auth identities (CMS admins)", "source": "old auth users + admin_allowlist", "outcome": "migrate", "status": "pending", "next_action": "owner gives admin email(s); admin activates via /cms"},
+    {"capability": "authorization (admin via user_roles/has_role)", "source": "src/apps/cms", "outcome": "migrate", "status": "pending", "next_action": "verify"},
+    {"capability": "public endpoints /api/*", "source": "src/routes/api", "outcome": "preserve", "status": "pending", "next_action": "verify"},
+    {"capability": "public insert: community_applications", "source": "community-application-form", "outcome": "preserve", "status": "pending", "next_action": "verify"},
+    {"capability": "storage: yearbook-moments private bucket", "source": "src/lib/yearbook-photo.functions.ts", "outcome": "migrate", "status": "pending", "next_action": "create bucket; existing files need export"},
+    {"capability": "hosting lock (cms/backup preview-only)", "source": "src/lib/hosting-lock.ts", "outcome": "preserve", "status": "pending", "next_action": "copy, tests"},
+    {"capability": "program access codes", "source": "src/lib/program-access.server.ts", "outcome": "preserve", "status": "pending", "next_action": "copy"},
+    {"capability": "schedules / webhooks / external providers", "source": "none found", "outcome": "not-applicable", "status": "verified", "next_action": "none"},
+    {"capability": "secrets", "source": ".env (old project Cloud keys only)", "outcome": "not-applicable", "status": "verified", "next_action": "new Cloud provides its own"},
+    {"capability": "cutover (nempogarut.com domain)", "source": "published domain", "outcome": "pending", "status": "pending", "next_action": "after publish, owner moves domain"},
+    {"capability": "verification", "source": "-", "outcome": "verify", "status": "pending", "next_action": "build, tests, routes"}
+  ]
+}
