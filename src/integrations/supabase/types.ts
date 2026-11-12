@@ -613,6 +613,48 @@ export type Database = {
         }
         Relationships: []
       }
+      partnership_proposals: {
+        Row: {
+          brand_category: string
+          brand_name: string
+          budget_range: string | null
+          collaboration_types: string
+          contact_name: string
+          created_at: string
+          email: string
+          id: number
+          message: string | null
+          status: string
+          whatsapp: string
+        }
+        Insert: {
+          brand_category: string
+          brand_name: string
+          budget_range?: string | null
+          collaboration_types: string
+          contact_name: string
+          created_at?: string
+          email: string
+          id?: number
+          message?: string | null
+          status?: string
+          whatsapp: string
+        }
+        Update: {
+          brand_category?: string
+          brand_name?: string
+          budget_range?: string | null
+          collaboration_types?: string
+          contact_name?: string
+          created_at?: string
+          email?: string
+          id?: number
+          message?: string | null
+          status?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
       penginapan: {
         Row: {
           active: boolean | null

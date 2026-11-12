@@ -1,7 +1,8 @@
 import { Layout } from "@/components/layout";
+import { PartnershipProposalForm } from "@/components/partnership-proposal-form";
 import { SEO } from "@/components/seo";
 import { Link } from "@/lib/wouter";
-import { ArrowRight, CalendarDays, Check, Lock, MapPin, MessageCircle, Presentation } from "lucide-react";
+import { ArrowRight, CalendarDays, Check, Lock, MapPin, Presentation } from "lucide-react";
 import { PROGRAM_NEMPO, type ProgramNempo } from "@/data/program";
 
 function InfoProgram({ p }: { p: ProgramNempo }) {
@@ -85,8 +86,8 @@ export default function ProgramPage() {
     <Layout>
       <SEO
         title="Program Nempo Organizer"
-        description="Program dan proposal kolaborasi Nempo Organizer, mulai dari Pasar Seni Garut 2027."
-        keywords="program Nempo, Pasar Seni Garut, proposal kolaborasi Nempo"
+        description="Program dan proposal kolaborasi Nempo Organizer, mulai dari Pasar Seni Garut 2027. Brand bisa langsung mengajukan kerja sama."
+        keywords="program Nempo, Pasar Seni Garut, proposal kolaborasi Nempo, ajukan kerja sama sponsor Garut"
         path="/program"
       />
       <main className="min-h-screen bg-slate-50/60 pb-24 text-[#17233a]">
@@ -95,7 +96,8 @@ export default function ProgramPage() {
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-white/60">Nempo Organizer</p>
             <h1 className="mt-2 text-3xl font-black leading-tight tracking-[-0.04em] sm:text-4xl lg:text-5xl">Program</h1>
             <p className="mt-3 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
-              Program yang sedang kami siapkan bersama mitra. Proposal lengkap bisa dibuka dengan kata sandi dari tim Nempo.
+              Program yang sedang kami siapkan bersama mitra. Proposal lengkap bisa dibuka dengan kata sandi
+              dari tim Nempo, dan brand bisa langsung mengajukan kerja sama lewat formulir di bawah.
             </p>
           </div>
         </section>
@@ -111,17 +113,8 @@ export default function ProgramPage() {
             </div>
           )}
 
-          <div className="mt-10 flex flex-col items-start gap-4 rounded-3xl border border-[#0F766E]/15 bg-white p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-            <div>
-              <h2 className="text-lg font-black">Mau ikut atau jadi mitra?</h2>
-              <p className="mt-1 text-sm leading-6 text-slate-600">Hubungi tim Nempo untuk kata sandi proposal atau ajakan kerja sama.</p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0F766E] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0d6560]"
-            >
-              <MessageCircle className="h-4 w-4" /> Hubungi kami
-            </Link>
+          <div className="mt-10">
+            <PartnershipProposalForm />
           </div>
         </section>
       </main>
