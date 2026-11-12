@@ -29,6 +29,12 @@ export const modules: Record<string, ModuleSpec> = {
   banners: {title:'Banner Beranda',description:'Kelola banner utama yang tampil pada aplikasi Garut.',fields:fields({key:'title',label:'Judul',required:true},{key:'image',label:'URL gambar',type:'url'},{key:'url',label:'Tautan',type:'url'},{key:'active',label:'Aktif',type:'checkbox'},{key:'sort_order',label:'Urutan',type:'number'})},
   'promo-banners': {title:'Banner Promo',description:'Kelola materi promosi berukuran ringkas.',fields:fields({key:'title',label:'Judul',required:true},{key:'image',label:'URL gambar',type:'url'},{key:'url',label:'Tautan',type:'url'},{key:'active',label:'Aktif',type:'checkbox'},{key:'sort_order',label:'Urutan',type:'number'})},
   partners: {title:'Mitra Kami',description:'Kelola mitra dan tautan yang tampil pada platform.',fields:fields({key:'name',label:'Nama mitra',required:true},{key:'logo',label:'URL logo',type:'url'},{key:'link',label:'Tautan',type:'url'},{key:'category',label:'Kategori'},{key:'active',label:'Aktif',type:'checkbox'})},
+  partnership: {title:'Kerja Sama',description:'Pengajuan kerja sama dari brand dan mitra lewat halaman Program.',fields:fields(
+    {key:'brand_name',label:'Nama brand',required:true},{key:'contact_name',label:'Nama PIC',required:true},
+    {key:'whatsapp',label:'Nomor WhatsApp',required:true},{key:'email',label:'Email',required:true},
+    {key:'brand_category',label:'Kategori brand'},{key:'collaboration_types',label:'Bentuk kerja sama',type:'textarea'},
+    {key:'budget_range',label:'Kisaran anggaran'},{key:'message',label:'Usulan',type:'textarea'},
+    {key:'status',label:'Status (diajukan/diproses/diterima/ditolak)'})},
   'event-orders':{title:'Pesanan Tiket',description:'Pantau dan proses pesanan tiket acara.',endpoint:'/api/event-orders',readonly:true},
   'jajan-yuk':{title:'Pesanan & Menu',description:'Kelola menu merchant dan pesanan Jajan YUK.',endpoint:'/api/admin/jajan-yuk/merchants',readonly:true},
   'ticket-scanner':{title:'Scan Tiket Masuk',description:'Validasi kode tiket pada layanan tiket Garut.',readonly:true},
@@ -38,7 +44,7 @@ export const modules: Record<string, ModuleSpec> = {
   'backup':{title:'Backup Data',description:'Ekspor atau pulihkan data layanan CMS.',readonly:true},
 };
 const titles: Record<string,string> = {
-  vouchers:'Voucher & Kupon','kamus-sunda':'Kamus Sunda',transportasi:'Transportasi','price-list':'Daftar Harga',partnership:'Kerja Sama',
+  vouchers:'Voucher & Kupon','kamus-sunda':'Kamus Sunda',transportasi:'Transportasi','price-list':'Daftar Harga',
   'digital-services':'Layanan Digital',notifications:'Notifikasi',users:'Daftar User',mitra:'Akun Mitra',donations:'Donasi Bibit',
   influencers:'Influencer & Kreator','talent':'Talent Studio','talent-portfolio':'Karya Talent','talent-banner':'Banner Talent',
   'influencer-banner-photos':'Foto Banner Influencer',

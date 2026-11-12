@@ -17,6 +17,7 @@ export const BACKUP_TABLES = [
   "kuliner",
   "media_archive",
   "partners",
+  "partnership_proposals",
   "penginapan",
   "perlombaan",
   "price_list",

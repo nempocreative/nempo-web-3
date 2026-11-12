@@ -19,3 +19,4 @@
 
 - [x] Program Pasar Seni Garut: semua tahun jadi 2027, tanggal jadi "Tanggal menyusul", tempat tetap "Ciplaz Garut (Opsional)"
 - [x] Program Pasar Seni Garut: hapus semua tanda bintang (ikon Star/Sparkles, glyph ★) dari slide
+- [x] Program: formulir "Ajukan Kerja Sama" supaya brand bisa langsung mengajukan kerja sama (tersimpan di database, dibaca lewat CMS Kerja Sama)

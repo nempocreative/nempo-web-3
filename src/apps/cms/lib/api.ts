@@ -70,6 +70,7 @@ export const tableFor: Record<string, TableName> = {
   berita: 'berita', vouchers: 'vouchers', 'kamus-sunda': 'kamus_sunda', transportasi: 'transportasi',
   'price-list': 'price_list', 'digital-services': 'digital_services', banners: 'banners',
   'promo-banners': 'promo_banners', partners: 'partners', influencers: 'influencers', talent: 'talents',
+  partnership: 'partnership_proposals',
 };
 export const supportedSlugs = new Set([...Object.keys(tableFor), 'settings', 'backup']);
 /** Kept for compatibility with older imports. */
@@ -120,6 +121,7 @@ export const resourceApi = {
     const t = tableOrThrow(slug);
     const row = await clean(t, payload);
     if (slug === 'cafe' && !row.category) row.category = 'Cafe';
+    if (slug === 'partnership' && !row.status) row.status = 'diajukan';
     const { error } = await supabase.from(t as never).insert(row as never); fail(error); return {};
   },
   update: async (slug: string, id: string | number, payload: unknown) => {

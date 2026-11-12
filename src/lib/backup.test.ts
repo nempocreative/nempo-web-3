@@ -5,11 +5,12 @@ const empty = () =>
   Object.fromEntries(BACKUP_TABLES.map((t) => [t, { rows: [], expected: 0 }])) as unknown as Record<BackupTable, BackupTableResult>;
 
 describe("backup", () => {
-  it("covers all 21 database tables including photo submissions and the media recovery archive", () => {
-    expect(BACKUP_TABLES).toHaveLength(21);
-    expect(new Set(BACKUP_TABLES).size).toBe(21);
+  it("covers all 22 database tables including photo submissions, partnership proposals and the media recovery archive", () => {
+    expect(BACKUP_TABLES).toHaveLength(22);
+    expect(new Set(BACKUP_TABLES).size).toBe(22);
     expect(BACKUP_TABLES).toContain("media_archive");
     expect(BACKUP_TABLES).toContain("yearbook_photo_submissions");
+    expect(BACKUP_TABLES).toContain("partnership_proposals");
 
   });
 
@@ -26,7 +27,7 @@ describe("backup", () => {
     const file = buildBackupFile(ok);
     expect(file.summary.complete).toBe(true);
     expect(file.summary.totalRows).toBe(2);
-    expect(Object.keys(file.data)).toHaveLength(21);
+    expect(Object.keys(file.data)).toHaveLength(22);
 
     const partial = empty();
     partial.kuliner = { rows: [{ id: 1 }], expected: 3 };
