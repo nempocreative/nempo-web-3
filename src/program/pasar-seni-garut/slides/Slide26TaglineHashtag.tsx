@@ -5,23 +5,23 @@ import SlideHeader from '../components/SlideHeader';
 const base = '/media/pasar-seni-garut/';
 
 const hashtags = [
-  { tag: '#PasarParaJuara',        featured: true  },
-  { tag: '#DariTradisiLahirJuara', featured: false },
+  { tag: '#PasarRakyatGarut',        featured: true  },
+  { tag: '#DariTradisiLahirKarya', featured: false },
   { tag: '#PasarSeniGarut',        featured: false },
-  { tag: '#JuaraLocalChampion',     featured: false },
-  { tag: '#JuaraDariGarut',        featured: false },
+  { tag: '#LocalChampionGarut',     featured: false },
+  { tag: '#KaryaDariGarut',        featured: false },
 ];
 
-const TAGLINE = '"Dari Tradisi Lahir Juara"';
+const TAGLINE = '"Dari Tradisi Lahir Karya"';
 
 /* floating ghost hashtags in background */
 const ghosts = [
-  { tag:'#PasarParaJuara',        x:'5%',  y:'18%', dur:'22s', delay:'0s',   size:'2.6cqw', op:0.035 },
-  { tag:'#JuaraLocalChampion',     x:'68%', y:'8%',  dur:'27s', delay:'3s',   size:'1.8cqw', op:0.03  },
-  { tag:'#JuaraDariGarut',        x:'82%', y:'55%', dur:'19s', delay:'1.5s', size:'2.2cqw', op:0.04  },
-  { tag:'#DariTradisiLahirJuara', x:'2%',  y:'68%', dur:'24s', delay:'5s',   size:'1.5cqw', op:0.025 },
+  { tag:'#PasarRakyatGarut',        x:'5%',  y:'18%', dur:'22s', delay:'0s',   size:'2.6cqw', op:0.035 },
+  { tag:'#LocalChampionGarut',     x:'68%', y:'8%',  dur:'27s', delay:'3s',   size:'1.8cqw', op:0.03  },
+  { tag:'#KaryaDariGarut',        x:'82%', y:'55%', dur:'19s', delay:'1.5s', size:'2.2cqw', op:0.04  },
+  { tag:'#DariTradisiLahirKarya', x:'2%',  y:'68%', dur:'24s', delay:'5s',   size:'1.5cqw', op:0.025 },
   { tag:'#PasarSeniGarut',        x:'48%', y:'82%', dur:'20s', delay:'2s',   size:'2cqw',   op:0.03  },
-  { tag:'#PasarParaJuara',        x:'90%', y:'28%', dur:'31s', delay:'7s',   size:'1.6cqw', op:0.025 },
+  { tag:'#PasarRakyatGarut',        x:'90%', y:'28%', dur:'31s', delay:'7s',   size:'1.6cqw', op:0.025 },
 ];
 
 /* sparks */

@@ -6,10 +6,10 @@ const base = '/media/pasar-seni-garut/';
 
 const cara = [
   { metode: 'Tukar Uang Tunai',        nilai: 'Sesuai nominal',     note: false },
-  { metode: 'Aktivasi Booth Juara',     nilai: 'Sesuai program',     note: false },
-  { metode: 'Tukar Kemasan Juara',      nilai: 'Rp3.000 / Kemasan*', note: true  },
-  { metode: 'Challenge Event',          nilai: 'Bonus Koin Juara',   note: false },
-  { metode: 'Games & Aktivasi Sponsor', nilai: 'Bonus Koin Juara',   note: false },
+  { metode: 'Aktivasi Booth Sponsor',     nilai: 'Sesuai program',     note: false },
+  { metode: 'Tukar Kemasan Sponsor',      nilai: 'Rp3.000 / Kemasan*', note: true  },
+  { metode: 'Challenge Event',          nilai: 'Bonus Koin Nempo',   note: false },
+  { metode: 'Games & Aktivasi Sponsor', nilai: 'Bonus Koin Nempo',   note: false },
 ];
 
 const fungsi = [
@@ -36,7 +36,7 @@ const bgSparks = [
   { left: '42%', top: '88%', dur: '4.6s', delay: '2.0s' },
 ];
 
-export default function Slide34KoinJuara() {
+export default function Slide34KoinNempo() {
   const [go,     setGo]     = useState(false);
   const [hovRow, setHovRow] = useState<number | null>(null);
   const [hovFun, setHovFun] = useState<number | null>(null);
@@ -345,8 +345,8 @@ export default function Slide34KoinJuara() {
 
             {/* Coin image */}
             <img
-              src={`${base}koin-juara2.webp?v=2`}
-              alt="Koin Juara"
+              src={`${base}koin-nempo.webp`}
+              alt="Koin Nempo"
               style={{
                 width: '19cqw', height: '19cqw', objectFit: 'contain',
                 position: 'relative', zIndex: 1,
@@ -363,7 +363,7 @@ export default function Slide34KoinJuara() {
             opacity: go ? 1 : 0,
             animation: go ? 'fadeUp34 0.6s cubic-bezier(0.22,1,0.36,1) 0.5s both' : 'none',
           }}>
-            KOIN<br /><span className="koin-accent34">JUARA</span>
+            KOIN<br /><span className="koin-accent34">NEMPO</span>
           </h2>
 
           {/* Tagline */}
@@ -382,7 +382,7 @@ export default function Slide34KoinJuara() {
               fontFamily: 'var(--font-display,serif)', fontStyle: 'italic',
               fontSize: '1.05cqw', color: 'rgba(245,230,195,0.52)', textAlign: 'center',
               animation: 'taglineDrift34 4.5s ease-in-out 2s infinite',
-            }}>"Dari Juara Untuk Para Juara"</p>
+            }}>"Dari Garut Untuk Garut"</p>
             <div style={{
               height: '0.1cqh', width: '2cqw',
               background: 'linear-gradient(to right, rgba(212,160,23,0.45), transparent)',
@@ -443,7 +443,7 @@ export default function Slide34KoinJuara() {
               fontSize: '2.2cqw', lineHeight: 1.05, marginBottom: '2cqh',
               color: 'rgba(245,230,195,0.97)',
             }}>
-              Koin <span style={{ color: '#D4A017' }}>Juara</span>
+              Koin <span style={{ color: '#D4A017' }}>Nempo</span>
             </h3>
 
             {/* Table */}
@@ -518,7 +518,7 @@ export default function Slide34KoinJuara() {
             animation: 'hDivPulse34 4s ease-in-out infinite',
           }} />
 
-          {/* ── Fungsi Koin Juara ── */}
+          {/* ── Fungsi Koin Nempo ── */}
           <div style={{ flex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.2cqw', marginBottom: '1.8cqh' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5cqw' }}>
@@ -532,7 +532,7 @@ export default function Slide34KoinJuara() {
                   color: 'rgba(212,160,23,0.70)', textTransform: 'uppercase',
                   letterSpacing: '0.28em',
                   animation: 'labelBreath34 4s ease-in-out 2s infinite',
-                }}>Fungsi Koin Juara</span>
+                }}>Fungsi Koin Nempo</span>
               </div>
               <div style={{
                 flex: 1, height: '0.08cqh',

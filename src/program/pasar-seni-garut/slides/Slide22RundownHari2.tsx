@@ -11,14 +11,14 @@ const schedule = [
   { time: '11.00 – 12.00',  activity: 'Workshop Kerajinan Lokal',                    location: 'Workshop Area'  },
   { time: '12.00 – 13.00',  activity: 'ISHOMA',                                       location: 'Area Festival'  },
   { time: '13.00 – 14.00',  activity: 'Workshop Branding UMKM',                      location: 'Community Stage'},
-  { time: '14.00 – 15.00',  activity: 'Talkshow "Dari Garut Menjadi Juara"',         location: 'Main Stage'     },
+  { time: '14.00 – 15.00',  activity: 'Talkshow "Dari Garut untuk Indonesia"',         location: 'Main Stage'     },
   { time: '15.00 – 16.00',  activity: 'Showcase Komunitas Kreatif',                  location: 'Main Stage'     },
   { time: '16.00 – 17.00',  activity: 'Lomba Konten Creator Pasar Seni',             location: 'Area Festival'  },
   { time: '17.00 – 18.00',  activity: 'Penilaian Tenant Champion',                   location: 'Seluruh Area'   },
   { time: '18.00 – 19.00',  activity: 'ISHOMA',                                       location: 'Area Festival'  },
   { time: '19.00 – 20.00',  activity: 'Musik Akustik & Indie Local',                 location: 'Main Stage'     },
   { time: '20.00 – 21.00',  activity: 'Panggung Komunitas',                           location: 'Main Stage'     },
-  { time: '21.00 – 22.00',  activity: 'Malam Para Juara',                             location: 'Main Stage'     },
+  { time: '21.00 – 22.00',  activity: 'Malam Apresiasi Karya',                             location: 'Main Stage'     },
   { time: '22.00',          activity: 'Penutupan Hari Kedua',                         location: '—'              },
 ];
 

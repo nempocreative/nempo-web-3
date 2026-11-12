@@ -22,7 +22,7 @@ const target = [
   { item: 'Pengunjung',                val: '10.000 Orang',  highlight: false },
   { item: 'UMKM Terpilih',             val: '50 Tenant',     highlight: false },
   { item: 'Komunitas',                 val: '30 Komunitas',  highlight: false },
-  { item: 'Sponsor Utama',             val: 'Juara',          highlight: false },
+  { item: 'Sponsor Utama',             val: '1 Brand',       highlight: false },
   { item: 'Sponsor Pendukung',         val: '10 Brand',      highlight: false },
   { item: 'Transaksi UMKM',            val: 'Rp500 Juta+',   highlight: true  },
   { item: 'Member UMKM Tahun Pertama', val: '100 UMKM',      highlight: false },

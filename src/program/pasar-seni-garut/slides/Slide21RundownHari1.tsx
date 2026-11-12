@@ -13,11 +13,11 @@ const schedule = [
   { time: '12.00 – 13.00', activity: 'Istirahat & Sholat',                                    location: 'Mushola'         },
   { time: '13.00 – 14.00', activity: 'Opening Ceremony',                                      location: 'Main Stage'      },
   { time: '14.00 – 14.30', activity: 'Sambutan Ketua Pelaksana',                              location: 'Main Stage'      },
-  { time: '14.30 – 15.00', activity: 'Sambutan Sponsor Juara',                                 location: 'Main Stage'      },
+  { time: '14.30 – 15.00', activity: 'Sambutan Sponsor Utama',                                 location: 'Main Stage'      },
   { time: '15.00 – 15.30', activity: 'Sambutan Pemerintah Daerah',                            location: 'Main Stage'      },
   { time: '15.30 – 16.00', activity: 'Seremoni Pembukaan & Pemukulan Kentongan',              location: 'Main Stage'      },
   { time: '16.00 – 17.00', activity: 'Launching Pasar Seni Garut sebagai Event Tahunan',     location: 'Main Stage'      },
-  { time: '17.00 – 18.00', activity: 'Talkshow "UMKM Juara Garut"',                          location: 'Community Stage' },
+  { time: '17.00 – 18.00', activity: 'Talkshow "UMKM Hebat Garut"',                          location: 'Community Stage' },
   { time: '18.00 – 19.00', activity: 'ISHOMA',                                                location: 'Area Festival'   },
   { time: '19.00 – 20.00', activity: 'Akustik Senja',                                         location: 'Main Stage'      },
   { time: '20.00 – 21.00', activity: 'Panggung Seni Tradisional',                             location: 'Main Stage'      },
@@ -263,7 +263,7 @@ export default function Slide21RundownHari1() {
           color:'rgba(212,160,23,0.65)', fontSize:'1.15cqw', lineHeight:1.4,
           animation:'quotePulse21 4s ease-in-out 1s infinite',
           position:'relative', marginBottom:'auto',
-        }}>"Membuka Panggung<br />Para Juara"</p>
+        }}>"Membuka Panggung<br />Karya Lokal"</p>
 
         {/* Legend */}
         <div style={{ position:'relative', marginTop:'auto', display:'flex', flexDirection:'column', gap:'0.5cqh' }}>

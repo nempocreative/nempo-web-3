@@ -7,32 +7,32 @@ const base = '/media/pasar-seni-garut/';
 
 const flow = [
   { no: '01', label: 'Datang ke Pasar Seni' },
-  { no: '02', label: 'Menukar uang menjadi Koin Juara' },
+  { no: '02', label: 'Menukar uang menjadi Koin Nempo' },
   { no: '03', label: 'Berbelanja di tenant UMKM' },
   { no: '04', label: 'Mengumpulkan stempel transaksi' },
   { no: '05', label: 'Ikut memilih UMKM Champion' },
-  { no: '06', label: 'Menjadi bagian dari Festival Para Juara' },
+  { no: '06', label: 'Menjadi bagian dari Festival Rakyat Garut' },
 ];
 
 const aktivasi = [
   {
-    nama: 'KOIN JUARA CHALLENGE',
+    nama: 'KOIN NEMPO CHALLENGE',
     Icon: Target,
     highlight: false,
     steps: ['Belanja di 5 tenant berbeda', 'Kumpulkan stempel', 'Tukar hadiah eksklusif'],
   },
   {
-    nama: 'KOIN JUARA HUNT',
+    nama: 'KOIN NEMPO HUNT',
     Icon: Search,
     highlight: false,
-    steps: ['Kumpulkan Koin Juara terbanyak dari aktivitas sponsor', 'Menangkan undian hadiah utama'],
+    steps: ['Kumpulkan Koin Nempo terbanyak dari aktivitas sponsor', 'Menangkan undian hadiah utama'],
   },
   {
     nama: "PEOPLE'S CHAMPION VOTE",
     Icon: Trophy,
     highlight: true,
     steps: [
-      'Setiap pengunjung mendapat 1 Koin Juara Voting',
+      'Setiap pengunjung mendapat 1 Koin Nempo Voting',
       'Koin dimasukkan ke kotak UMKM favorit',
       "Pemenang raih People's Champion Award",
     ],
@@ -270,7 +270,7 @@ export default function Slide35KoinAktivasi() {
                 background: 'radial-gradient(circle, rgba(212,160,23,0.28) 0%, transparent 75%)',
                 animation: 'coinGlow35 4s ease-in-out infinite',
               }} />
-              <img src={`${base}koin-juara2.webp?v=2`} alt="Koin Juara"
+              <img src={`${base}koin-nempo.webp`} alt="Koin Nempo"
                 style={{
                   width: '10cqw', height: '10cqw', objectFit: 'contain',
                   position: 'relative', zIndex: 1,
@@ -305,7 +305,7 @@ export default function Slide35KoinAktivasi() {
                 fontSize: '3.2cqw', lineHeight: 0.95, letterSpacing: '-0.02em',
                 color: 'rgba(245,230,195,0.97)',
               }}>
-                KOIN<br /><span style={{ color: '#D4A017' }}>JUARA</span>
+                KOIN<br /><span style={{ color: '#D4A017' }}>NEMPO</span>
               </h2>
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function Slide35KoinAktivasi() {
             fontSize: '2.8cqw', lineHeight: 1.05, marginBottom: '1cqh',
             color: 'rgba(245,230,195,0.97)',
           }}>
-            Program <span className="prog-accent35">Koin Juara</span>
+            Program <span className="prog-accent35">Koin Nempo</span>
           </h2>
 
           {/* Aktivasi cards */}

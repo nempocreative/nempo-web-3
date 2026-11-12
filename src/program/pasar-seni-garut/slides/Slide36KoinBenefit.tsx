@@ -4,20 +4,20 @@ import SlideHeader from '../components/SlideHeader';
 const base = '/media/pasar-seni-garut/';
 
 const benefit = [
-  { program: 'Koin Juara',          manfaat: 'Brand muncul di seluruh transaksi festival', highlight: true },
+  { program: 'Koin Nempo',          manfaat: 'Brand muncul di seluruh transaksi festival', highlight: true },
   { program: 'Booth Penukaran',     manfaat: 'Traffic tinggi dari seluruh pengunjung' },
-  { program: 'Juara Exchange',      manfaat: 'Engagement konsumen langsung' },
+  { program: 'Nempo Exchange',      manfaat: 'Engagement konsumen langsung' },
   { program: "People's Champion",   manfaat: 'Interaksi aktif seluruh pengunjung' },
   { program: 'Champion Awards',     manfaat: 'Keterkaitan brand dengan tema acara' },
-  { program: 'Festival Para Juara', manfaat: 'Penyatuan identitas brand & event', highlight: true },
+  { program: 'Festival Rakyat Garut', manfaat: 'Penyatuan identitas brand & event', highlight: true },
 ];
 
 const taglines = [
-  { text: 'Belanja Juara, Dukung Juara', main: false },
-  { text: 'Satu Koin Untuk Para Juara', main: false },
-  { text: 'Koin Juara, Penggerak UMKM Lokal', main: false },
-  { text: 'Dari Juara Untuk Para Juara', main: true },
-  { text: 'Tukar, Belanja, Jadi Juara', main: false },
+  { text: 'Belanja Lokal, Dukung Lokal', main: false },
+  { text: 'Satu Koin untuk Garut', main: false },
+  { text: 'Koin Nempo, Penggerak UMKM Lokal', main: false },
+  { text: 'Dari Garut Untuk Garut', main: true },
+  { text: 'Tukar, Belanja, Dukung Garut', main: false },
 ];
 
 export default function Slide36KoinBenefit() {
@@ -41,14 +41,14 @@ export default function Slide36KoinBenefit() {
             <div className="flex items-center gap-[0.5cqw]">
               <div className="w-[0.3cqw] h-[2.5cqh] bg-psg-accent rounded-full" />
               <span className="font-psg-body text-psg-accent tracking-[0.28em] uppercase" style={{ fontSize: '0.78cqw' }}>
-                Benefit untuk Juara / Juara
+                Benefit untuk Sponsor
               </span>
             </div>
             <div className="flex-1 h-[0.08cqh] bg-psg-accent/25" />
           </div>
 
           <h2 className="font-psg-display font-bold text-psg-text mb-[3cqh]" style={{ fontSize: '3.2cqw', lineHeight: 1.0, letterSpacing: '-0.01em' }}>
-            Nilai <span className="text-psg-accent">Koin Juara</span><br />
+            Nilai <span className="text-psg-accent">Koin Nempo</span><br />
             <span className="text-psg-text/60" style={{ fontSize: '2cqw' }}>untuk Brand</span>
           </h2>
 
@@ -136,8 +136,8 @@ export default function Slide36KoinBenefit() {
               }}
             />
             <img
-              src={`${base}koin-juara2.webp?v=2`}
-              alt="Koin Juara"
+              src={`${base}koin-nempo.webp`}
+              alt="Koin Nempo"
               style={{
                 width: '13cqw',
                 height: '13cqw',
@@ -154,7 +154,7 @@ export default function Slide36KoinBenefit() {
             <div className="flex items-center gap-[0.5cqw]">
               <div className="w-[0.3cqw] h-[2cqh] bg-psg-accent rounded-full" />
               <p className="font-psg-body text-psg-accent tracking-[0.28em] uppercase" style={{ fontSize: '0.75cqw' }}>
-                Tagline Koin Juara
+                Tagline Koin Nempo
               </p>
             </div>
             <div className="flex-1 h-[0.08cqh] bg-psg-accent/20" />

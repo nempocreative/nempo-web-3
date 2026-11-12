@@ -14,7 +14,7 @@ const schedule = [
   { time: '14.00 – 15.00', activity: 'Parade UMKM & Komunitas',                              location: 'Area Festival'},
   { time: '15.00 – 16.00', activity: 'Penghitungan Voting & Persiapan Awarding',             location: 'Main Stage'   },
   { time: '16.00 – 17.00', activity: 'Pertunjukan Seni Budaya',                              location: 'Main Stage'   },
-  { time: '17.00 – 18.30', activity: 'Juara Local Champion Awards 2026',                      location: 'Main Stage'   },
+  { time: '17.00 – 18.30', activity: 'Local Champion Awards 2026',                      location: 'Main Stage'   },
   { time: '18.30 – 19.00', activity: 'Penyerahan Trophy Bergilir Pasar Seni Garut',         location: 'Main Stage'   },
   { time: '19.00 – 20.00', activity: 'Penampilan Guest Star',                                location: 'Main Stage'   },
   { time: '20.00 – 20.30', activity: 'Pengumuman Pasar Seni Garut 2027',                     location: 'Main Stage'   },
@@ -148,7 +148,7 @@ export default function Slide23RundownHari3() {
           0%,100% { box-shadow:none; }
           50%     { box-shadow:inset 0 0 2cqw rgba(212,160,23,0.08); }
         }
-        /* super-highlight — Juara awards & Grand Closing */
+        /* super-highlight — Champion awards & Grand Closing */
         @keyframes superGlow23 {
           0%,100% {
             box-shadow:none;
@@ -277,7 +277,7 @@ export default function Slide23RundownHari3() {
           color:'rgba(212,160,23,0.65)', fontSize:'1.15cqw', lineHeight:1.4,
           animation:'quotePulse23 3.5s ease-in-out 1s infinite',
           position:'relative', marginBottom:'auto',
-        }}>"Puncak Festival<br />Para Juara"</p>
+        }}>"Puncak Festival<br />Karya Lokal"</p>
 
         {/* Legend */}
         <div style={{ position:'relative', marginTop:'auto', display:'flex', flexDirection:'column', gap:'0.5cqh' }}>

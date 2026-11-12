@@ -11,10 +11,10 @@ export default function SlideHeader() {
       {/* Left: taglines */}
       <div className="flex flex-col gap-[0.1cqh]">
         <p className="font-psg-body text-psg-text/50 uppercase tracking-[0.22em]" style={{ fontSize: '0.75cqw' }}>
-          Juara dari Pasar Rakyat
+          Karya dari Pasar Rakyat
         </p>
         <p className="font-psg-display italic text-psg-text/35" style={{ fontSize: '0.8cqw' }}>
-          Dari Tradisi Lahir Juara
+          Dari Tradisi Lahir Karya
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export default function SlideHeader() {
 
       {/* Right: branding */}
       <p className="font-psg-body text-psg-accent/60" style={{ fontSize: '1cqw', letterSpacing: '0.08em' }}>
-        Juara <span className="text-psg-text/30 mx-[0.2cqw]">×</span> Nempo Garut
+        Nempo Garut
       </p>
     </div>
   );

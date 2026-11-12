@@ -7,19 +7,19 @@ const base = '/media/pasar-seni-garut/';
 const points = [
   {
     n: '1',
-    title: 'Juara Menjadi Bagian dari Kisah Para Juara Lokal',
+    title: 'Sponsor Menjadi Bagian dari Kisah Pelaku Lokal',
     sub: 'Bukan sekadar sponsor — brand yang mendukung:',
     chips: ['UMKM yang terus berkembang', 'Seniman yang terus berkarya', 'Komunitas yang terus bergerak', 'Kreator lokal yang terus berinovasi'],
   },
   {
     n: '2',
-    title: 'Juara Tidak Selalu Tentang Kompetisi',
-    chips: ['UMKM terbaik adalah juara.', 'Booth terbaik adalah juara.', 'Produk favorit pengunjung adalah juara.', 'Komunitas paling aktif adalah juara.'],
+    title: 'Apresiasi Tidak Selalu Tentang Kompetisi',
+    chips: ['UMKM terbaik layak diapresiasi.', 'Booth terbaik layak diapresiasi.', 'Produk favorit pengunjung layak diapresiasi.', 'Komunitas paling aktif layak diapresiasi.'],
   },
   {
     n: '3',
     title: 'Membangun Emotional Connection',
-    body: 'Masyarakat lebih mudah mengingat brand yang hadir mendukung mimpi mereka. Melalui konsep "Juara", Juara tidak hanya mendapat branding — tetapi membangun hubungan emosional nyata.',
+    body: 'Masyarakat lebih mudah mengingat brand yang hadir mendukung mimpi mereka. Melalui festival ini, sponsor tidak hanya mendapat branding — tetapi membangun hubungan emosional nyata.',
   },
   {
     n: '4',
@@ -49,7 +49,7 @@ const sparks = [
   { left:'82%', top:'42%', dur:'3.8s', delay:'2.0s' },
 ];
 
-export default function Slide20KenapaJuara() {
+export default function Slide20KenapaSponsor() {
   const [go,  setGo]  = useState(false);
   const [hov, setHov] = useState<number | null>(null);
   const [hovLine, setHovLine] = useState<number | null>(null);
@@ -114,7 +114,7 @@ export default function Slide20KenapaJuara() {
           50%  { background-position:100% 50%; }
           100% { background-position:0%   50%; }
         }
-        .esse-title20 {
+        .sponsor-title20 {
           background: linear-gradient(90deg,
             #fffbe8 0%, #D4A017 18%, #f5c842 35%,
             #fff8dc 52%, #D4A017 70%, #fffbe8 100%
@@ -125,7 +125,7 @@ export default function Slide20KenapaJuara() {
           background-clip:text;
           animation: shimmer20 4s ease infinite;
         }
-        .juara-text20 {
+        .sponsor-text20 {
           background: linear-gradient(90deg,
             #c8860a 0%, #f5c842 28%, #fffbe8 50%, #D4A017 72%, #c8860a 100%
           );
@@ -142,8 +142,8 @@ export default function Slide20KenapaJuara() {
           50%     { opacity:0.5; }
         }
 
-        /* ── right panel Juara watermark ── */
-        @keyframes esseDrift20 {
+        /* ── right panel Garut watermark ── */
+        @keyframes garutDrift20 {
           0%,100% { transform:translateY(0)   rotate(-2deg); opacity:0.09; }
           50%     { transform:translateY(-8px) rotate(-2deg); opacity:0.15; }
         }
@@ -236,7 +236,7 @@ export default function Slide20KenapaJuara() {
               fontFamily:'var(--font-body,sans-serif)',
               color:'rgba(212,160,23,0.72)', textTransform:'uppercase',
               letterSpacing:'0.3em', fontSize:'1cqw', fontWeight:600, flexShrink:0,
-            }}>Kenapa Juara Harus Mengambil Event Ini?</span>
+            }}>Kenapa Sponsor Harus Mengambil Event Ini?</span>
             <div style={{
               flex:1, height:'0.08cqh', background:'rgba(212,160,23,0.25)',
               transformOrigin:'left',
@@ -416,18 +416,18 @@ export default function Slide20KenapaJuara() {
             animation: go ? 'slideU20 0.6s ease 0.9s both' : 'none',
           }}>
             Dan setiap perjuangan<br />
-            layak disebut{' '}
-            <em className="juara-text20">Juara.</em>
+            layak{' '}
+            <em className="sponsor-text20">dirayakan.</em>
           </p>
 
-          {/* Juara watermark */}
+          {/* Garut watermark */}
           <p style={{
             position:'absolute', bottom:'5cqh', right:'2.5cqw',
             fontFamily:'var(--font-display,serif)', fontWeight:900,
             color:'rgba(212,160,23,0.10)', fontSize:'8cqw',
             userSelect:'none', lineHeight:1,
-            animation:'esseDrift20 5s ease-in-out 1s infinite',
-          }}>Juara</p>
+            animation:'garutDrift20 5s ease-in-out 1s infinite',
+          }}>Garut</p>
         </div>
       </div>
 

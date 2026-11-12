@@ -14,7 +14,7 @@ const communityItems = [
 
 const photoItems = [
   { Icon: Camera, label: 'Pusat dokumentasi pengunjung'       },
-  { Icon: Heart,  label: 'Spot foto ikonik berbranding Juara'  },
+  { Icon: Heart,  label: 'Spot foto ikonik berbranding sponsor'  },
   { Icon: Share2, label: 'Pusat viral content selama acara'   },
 ];
 
@@ -182,7 +182,7 @@ export default function Slide16AktivasiCommunity() {
             fontFamily:'var(--font-body,sans-serif)',
             color:'rgba(212,160,23,0.75)', textTransform:'uppercase',
             letterSpacing:'0.3em', fontSize:'1.1cqw', fontWeight:600, flexShrink:0,
-          }}>Aktivasi Juara</span>
+          }}>Aktivasi Sponsor</span>
           <div style={{
             flex:1, height:'0.08cqh', background:'rgba(212,160,23,0.28)',
             transformOrigin:'left',

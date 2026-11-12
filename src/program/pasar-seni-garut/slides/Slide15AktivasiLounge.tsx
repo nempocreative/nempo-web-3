@@ -16,7 +16,7 @@ const facilities = [
   },
   {
     no: '03', Icon: Camera,        name: 'Spot Foto Eksklusif',
-    desc: 'Instalasi foto berbranding Juara',
+    desc: 'Instalasi foto berbranding sponsor',
   },
   {
     no: '04', Icon: MessageCircle, name: 'Area Interaksi',
@@ -235,7 +235,7 @@ export default function Slide15AktivasiLounge() {
             marginBottom:'2cqh',
             opacity: go ? 1 : 0,
             animation: go ? 'slideL15 0.55s cubic-bezier(0.22,1,0.36,1) 0.18s both' : 'none',
-          }}>Aktivasi Juara</p>
+          }}>Aktivasi Sponsor</p>
 
           <h2 style={{
             fontFamily:'var(--font-display,serif)', fontWeight:900,

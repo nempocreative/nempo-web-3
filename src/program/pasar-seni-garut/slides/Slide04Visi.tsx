@@ -211,7 +211,7 @@ export default function Slide04Visi() {
           opacity: go ? 1 : 0,
           animation: go ? 'labelIn 0.7s ease 1.6s both' : 'none',
         }}>
-          Juara × Nempo Garut
+          Nempo Garut
         </p>
 
         {/* Three mission tags */}

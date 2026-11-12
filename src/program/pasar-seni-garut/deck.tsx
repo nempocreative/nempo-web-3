@@ -70,7 +70,7 @@ export default function PasarSeniDeck({ onKunci }: { onKunci: () => void }) {
         </Link>
         <div className="min-w-0 flex-1">
           <p className="truncate font-psg-display text-sm font-bold text-psg-accent sm:text-base">Pasar Seni Garut 2027</p>
-          <p className="truncate text-[11px] text-psg-text/55">Nempo Garut × ESSE · Proposal kolaborasi</p>
+          <p className="truncate text-[11px] text-psg-text/55">Nempo Garut · Proposal kolaborasi</p>
         </div>
         {bisaLayarPenuh && (
           <button type="button" onClick={toggleLayarPenuh} className="inline-flex items-center gap-1.5 rounded-full border border-psg-accent/30 px-3 py-2 text-xs font-semibold text-psg-text/80 hover:bg-psg-accent/10">
