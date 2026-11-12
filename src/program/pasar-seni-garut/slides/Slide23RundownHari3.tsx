@@ -16,7 +16,7 @@ const schedule = [
   { time: '16.00 – 17.00', activity: 'Pertunjukan Seni Budaya',                              location: 'Main Stage'   },
   { time: '17.00 – 18.30', activity: 'Local Champion Awards 2027',                      location: 'Main Stage'   },
   { time: '18.30 – 19.00', activity: 'Penyerahan Trophy Bergilir Pasar Seni Garut',         location: 'Main Stage'   },
-  { time: '19.00 – 20.00', activity: 'Penampilan Guest Star',                                location: 'Main Stage'   },
+  { time: '19.00 – 20.00', activity: 'Penampilan Tamu Istimewa',                          location: 'Main Stage'   },
   { time: '20.00 – 20.30', activity: 'Pengumuman Pasar Seni Garut 2027',                     location: 'Main Stage'   },
   { time: '20.30 – 21.30', activity: 'Grand Closing Celebration',                            location: 'Main Stage'   },
   { time: '21.30 – 22.00', activity: 'Foto Bersama Sponsor, Tenant & Komunitas',            location: 'Main Stage'   },
