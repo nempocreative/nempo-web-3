@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Program: proposal Pasanggiri Mojang Priangan — judul, tema, slide lomba tari, dan kartu Program
+- [x] Program: proposal Pasanggiri Mojang Priangan — judul, tema, 24 slide lomba tari, dan kartu Program; kata sandi, navigasi, serta tampilan HP/iPad/komputer telah diperiksa
 
 - [x] Portofolio contoh untuk kategori Momen Digital (seperti yearbook):
   - [x] Kelas — halaman contoh di /year-book/kelas, kartu kategori sudah aktif
