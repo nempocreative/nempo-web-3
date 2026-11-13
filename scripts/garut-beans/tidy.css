@@ -41,3 +41,60 @@ main.partnership-page {
   width: 100%;
   min-width: 0;
 }
+
+/* Inline access remains available without floating over forms or product cards. */
+.gb-footer-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 980px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+.gb-footer-shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 8px 16px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.gb-footer-shortcut img { width: 36px; height: 36px; object-fit: contain; }
+.gb-footer-shortcut span { font-size: 13px; font-weight: 700; }
+.gb-footer-shortcut:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+/* Consistent type and compact spacing, especially between the iPad menu and banners. */
+.gb-home-mascot-copy h2 { font-size: 28px; letter-spacing: 0; line-height: 1.2; }
+.gb-home-mascot-stage { min-height: 220px; }
+.gb-home-mascot-video { max-height: 240px; width: min(100%, 240px); }
+.gb-category-tile-label { letter-spacing: 0; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gb-home .gb-promo { margin-top: 24px; height: 240px; }
+  .gb-home .gb-category-pager { margin-top: 20px; }
+  .gb-home .gb-category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px 8px;
+    padding: 8px 0;
+    overflow: visible;
+  }
+  .gb-home .gb-category-page { display: contents; }
+  .gb-home .gb-category-tile,
+  .gb-home .gb-category-tile.is-featured { min-height: 96px; width: 100%; padding: 8px 4px; }
+  .gb-home .gb-category-pagination { display: none; }
+  .gb-home .gb-home-mascot-spotlight { margin: 20px 0; padding: 8px 0; }
+}
+@media (max-width: 767px) {
+  .gb-home-mascot-copy h2 { font-size: 20px; }
+  .gb-home-mascot-stage { min-height: 160px; }
+  .gb-home-mascot-video { width: min(100%, 145px); max-height: 170px; }
+  .gb-home .gb-category-pager { margin-top: 20px; }
+}

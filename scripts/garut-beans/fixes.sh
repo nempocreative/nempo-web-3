@@ -27,7 +27,7 @@ grep -q "window.innerWidth < 700 && window.scrollY < 480" "$APP_TSX" || { echo "
 # The dancing sheep mascot: the original cut-out video shows a white box on Safari/iOS (no transparent
 # video there) and has white wool holes. Use the re-cut animated WebP instead (see mascot-rekey.py);
 # a still frame shows when the visitor prefers reduced motion.
-cp "$(dirname "$0")/assets/kopi-menari-home-mascot.webp" "$(dirname "$0")/assets/kopi-menari-home-mascot-still.webp" "$APP/public/assets/"
+cp "$(dirname "$0")/assets/kopi-menari-home-mascot.webp" "$(dirname "$0")/assets/kopi-menari-home-mascot-still.webp" "$(dirname "$0")/assets/domba-garut-ipad-v2.png" "$APP/public/assets/"
 HOME_TSX="$APP/src/pages/home-page.tsx"
 python3 - "$HOME_TSX" <<'PY'
 import re, sys
@@ -35,7 +35,7 @@ p = sys.argv[1]; s = open(p).read()
 if 'kopi-menari-home-mascot.webp' not in s:
     pat = re.compile(r"<video\s+className=\"gb-home-mascot-video\".*?</video>", re.S)
     new = ('<img\n          className="gb-home-mascot-video"\n'
-           "          src={asset(reducedMotion ? 'kopi-menari-home-mascot-still.webp' : 'kopi-menari-home-mascot.webp')}\n"
+           "          src={asset(CSS.supports('-webkit-touch-callout', 'none') ? 'domba-garut-ipad-v2.png' : reducedMotion ? 'kopi-menari-home-mascot-still.webp' : 'kopi-menari-home-mascot.webp')}\n"
            '          width={420}\n          height={438}\n          loading="lazy"\n          decoding="async"\n'
            '          alt="Domba Garut Beans menari sambil memegang secangkir kopi"\n        />')
     s, n = pat.subn(new, s)
@@ -43,3 +43,4 @@ if 'kopi-menari-home-mascot.webp' not in s:
     open(p, 'w').write(s)
 PY
 sed -i 's#aspect-ratio: 640 / 668;#aspect-ratio: 420 / 438;#' "$HOME_CSS"
+python3 "$(dirname "$0")/presentation-fixes.py" "$APP"

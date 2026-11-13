@@ -22,4 +22,5 @@
 - [x] Program: formulir "Ajukan Kerja Sama" supaya brand bisa langsung mengajukan kerja sama (tersimpan di database, dibaca lewat CMS Kerja Sama)
 - [x] Program: tambah Garut Beans (G-Beans) sebagai program ke-2, buka webnya di tab baru (/garut-beans)
 - [x] Garut Beans: rapikan halaman (tombol, halaman Mitra, tombol Mini Games/Live Chat di HP)
+- [ ] Garut Beans: perapihan lanjutan — jarak beranda/tablet, akses bantuan tidak menutupi isi, keterangan akun demo, domba iPad
 - [ ] Garut Beans: akun pembeli (poin & voucher) belum tersambung — menunggu keputusan pemilik
