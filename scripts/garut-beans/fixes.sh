@@ -11,7 +11,12 @@ sed -i 's/^\.gb-home button {$/.gb-home :where(button) {/' "$HOME_CSS"
 grep -q '^\.gb-home :where(button) {$' "$HOME_CSS" || { echo "fixes.sh: home button reset not found" >&2; exit 1; }
 
 # Shadow room for sideways card rows and smaller floating buttons on phones.
-grep -q "NEMPO tidy fixes" "$HOME_CSS" || cat "$(dirname "$0")/tidy.css" >> "$HOME_CSS"
+# Re-running drops the previously appended block first, so edits to tidy.css always land.
+# (The original file has no final newline, so an earlier block may sit right after a closing brace.)
+sed -i 's#}/\* NEMPO tidy fixes#}\n/* NEMPO tidy fixes#' "$HOME_CSS"
+sed -i '/^\/\* NEMPO tidy fixes/,$d' "$HOME_CSS"
+[ -z "$(tail -c1 "$HOME_CSS")" ] || echo >> "$HOME_CSS"
+cat "$(dirname "$0")/tidy.css" >> "$HOME_CSS"
 
 # The home page hides the Mini Games / Live Chat buttons above the menu only on very narrow phones
 # (<= 420px), so on most phones they cover the menu icons. Hide them there on every phone width.
