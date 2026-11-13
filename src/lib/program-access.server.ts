@@ -1,6 +1,7 @@
 /** Server-only access codes for locked program proposals. Never import from browser code. */
 const KODE_PROGRAM: Record<string, string> = {
   "pasar-seni-garut": "121212",
+  "mojang-priangan": "121212",
 };
 
 export function cocokkanKodeProgram(program: string, kode: string): boolean {
