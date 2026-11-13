@@ -5,7 +5,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$HERE/../.." && pwd)"
 SRC="${GB_SRC:-/tmp/garut-beans}"
-if [ ! -d "$SRC/.git" ]; then
+if [ ! -f "$SRC/artifacts/kopi-garut-web/package.json" ]; then
   git clone --depth 1 https://github.com/nempocreative/Garut-Coffee-166 "$SRC"
 fi
 cd "$SRC"
