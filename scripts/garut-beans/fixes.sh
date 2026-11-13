@@ -9,6 +9,8 @@ HOME_CSS="$APP/src/pages/home-page.css"
 # :where() keeps the reset but lets the button classes win again.
 sed -i 's/^\.gb-home button {$/.gb-home :where(button) {/' "$HOME_CSS"
 grep -q '^\.gb-home :where(button) {$' "$HOME_CSS" || { echo "fixes.sh: home button reset not found" >&2; exit 1; }
+# The upstream footer leaves a dangling selector immediately before @media.
+sed -i '/^\.gb-footer-logo:focus-visible,$/d' "$HOME_CSS"
 
 # Shadow room for sideways card rows and smaller floating buttons on phones.
 # Re-running drops the previously appended block first, so edits to tidy.css always land.
@@ -40,7 +42,9 @@ if 'kopi-menari-home-mascot.webp' not in s:
            '          alt="Domba Garut Beans menari sambil memegang secangkir kopi"\n        />')
     s, n = pat.subn(new, s)
     if n != 1: sys.exit("fixes.sh: mascot video not found")
-    open(p, 'w').write(s)
+s = s.replace("src={asset(reducedMotion ? 'kopi-menari-home-mascot-still.webp' : 'kopi-menari-home-mascot.webp')}",
+              "src={asset(CSS.supports('-webkit-touch-callout', 'none') ? 'domba-garut-ipad-v2.png' : reducedMotion ? 'kopi-menari-home-mascot-still.webp' : 'kopi-menari-home-mascot.webp')}")
+open(p, 'w').write(s)
 PY
 sed -i 's#aspect-ratio: 640 / 668;#aspect-ratio: 420 / 438;#' "$HOME_CSS"
 python3 "$(dirname "$0")/presentation-fixes.py" "$APP"

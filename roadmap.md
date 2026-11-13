@@ -22,5 +22,6 @@
 - [x] Program: formulir "Ajukan Kerja Sama" supaya brand bisa langsung mengajukan kerja sama (tersimpan di database, dibaca lewat CMS Kerja Sama)
 - [x] Program: tambah Garut Beans (G-Beans) sebagai program ke-2, buka webnya di tab baru (/garut-beans)
 - [x] Garut Beans: rapikan halaman (tombol, halaman Mitra, tombol Mini Games/Live Chat di HP)
-- [ ] Garut Beans: perapihan lanjutan — jarak beranda/tablet, akses bantuan tidak menutupi isi, keterangan akun demo, domba iPad
+- [x] Garut Beans: perapihan lanjutan — jarak beranda/tablet, akses bantuan di bawah halaman, keterangan akun demo, domba PNG khusus iPad
+- [ ] Garut Beans: pastikan kotak putih domba hilang pada iPad pengguna — menunggu pemeriksaan perangkat, Safari pengujian tidak dapat membuka halaman
 - [ ] Garut Beans: akun pembeli (poin & voucher) belum tersambung — menunggu keputusan pemilik
