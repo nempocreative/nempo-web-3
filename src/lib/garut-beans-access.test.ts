@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
   cocokkanKodeGarutBeans,
@@ -46,5 +47,11 @@ describe("Garut Beans sub-site password", () => {
     expect(html).toContain('name="kode"');
     expect(html).toContain('value="/garut-beans/catalog"');
     expect(html).not.toContain("161616");
+  });
+});
+
+describe("Garut Beans after publishing", () => {
+  it("has no public start page that would skip the password", () => {
+    expect(existsSync("public/garut-beans/index.html")).toBe(false);
   });
 });
