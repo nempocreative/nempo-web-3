@@ -1,3 +1,9 @@
+# Re-cuts the dancing sheep mascot from the original white-backdrop frames.
+# The repo's cut-out video lost parts of the white wool and keeps a white box on
+# browsers without transparent-video support (Safari/iOS), so the home page uses
+# the animated WebP in assets/ made with this script instead. To redo it:
+#   ffmpeg -i kopi-menari-home-cutout.webm -vf fps=15 base/%03d.png   (plain decoder = white backdrop)
+#   python3 mascot-rekey.py   -> clean/*.png, then save as animated WebP 420x438, 67 ms per frame.
 import glob, sys, numpy as np
 from PIL import Image
 from scipy import ndimage
