@@ -52,10 +52,13 @@ export default function MojangDeck({ onKunci }: { onKunci: () => void }) {
     <div className="psg-chrome mx-auto mt-4 flex max-w-[1600px] items-center gap-3">
       <Button size="icon" aria-label="Slide sebelumnya" title="Slide sebelumnya" onClick={() => move(-1)} disabled={index === 0}><ChevronLeft /></Button>
       <label className="sr-only" htmlFor="mp-slide-select">Pilih slide</label>
-      <select id="mp-slide-select" value={index} onChange={e => setIndex(Number(e.target.value))} className="h-10 min-w-0 flex-1 rounded-md border border-border bg-background px-3 text-sm text-foreground">{MOJANG_SLIDES.map((s, i) => <option key={s.label} value={i}>{String(i + 1).padStart(2, "0")} · {s.title.replaceAll("\n", " ")}</option>)}</select>
-      <span className="hidden text-xs text-muted-foreground sm:inline">{index + 1} / {MOJANG_SLIDES.length}</span>
+      <select id="mp-slide-select" value={index} onChange={e => setIndex(Number(e.target.value))} className="h-10 min-w-0 flex-1 rounded-md border border-border bg-background px-3 text-sm text-foreground">{MOJANG_SLIDES.map((s, i) => <option key={s.label} value={i}>{String(i + 1).padStart(2, "0")} · {i === 0 ? "Cover · Lomba Tari 2027" : s.label.split(" / ")[1]}</option>)}</select>
+      <span className="shrink-0 text-xs text-muted-foreground">{index + 1} / {MOJANG_SLIDES.length}</span>
       <Button size="icon" aria-label="Slide berikutnya" title="Slide berikutnya" onClick={() => move(1)} disabled={index === MOJANG_SLIDES.length - 1}><ChevronRight /></Button>
     </div>
+    <nav aria-label="Bagian proposal" className="psg-chrome mx-auto mt-3 flex max-w-[1600px] flex-wrap gap-2">
+      {[{ label: "Aturan peserta", section: "Kategori & kelayakan" }, { label: "Anggaran", section: "RAB · produksi" }, { label: "Paket sponsor", section: "Paket · Mitra Utama" }].map(part => <Button key={part.section} variant="outline" size="sm" onClick={() => { const target = MOJANG_SLIDES.findIndex(s => s.label.endsWith(` / ${part.section}`)); if (target >= 0) setIndex(target); }}>{part.label}<ChevronRight /></Button>)}
+    </nav>
     {full && <div className="mp-full-controls"><Button size="icon" variant="outline" aria-label="Slide sebelumnya" disabled={index === 0} onClick={() => move(-1)}><ChevronLeft /></Button><Button size="icon" variant="outline" aria-label="Slide berikutnya" disabled={index === MOJANG_SLIDES.length - 1} onClick={() => move(1)}><ChevronRight /></Button><Button size="icon" variant="outline" aria-label="Keluar layar penuh" onClick={toggle}><Minimize2 /></Button></div>}
   </div>;
 }
