@@ -34,6 +34,25 @@ const pdhLongFrames = byName(
   import.meta.glob<string>("/src/assets/pdh-long-spin-*.webp", { eager: true, import: "default" }),
 );
 
+// Warna badan tumbler mini yang bisa dipilih pembeli (sama dengan contoh dari toko).
+// Warna terang dicetak biru Nempo, warna gelap dicetak putih, supaya tetap terbaca.
+const TUMBLER_MINI_WARNA = [
+  { nama: "Biru Dongkal", slug: "biru-dongkal", hex: "#1D4B5B", cetak: "putih" },
+  { nama: "Putih", slug: "putih", hex: "#F5F5F5", cetak: "biru" },
+  { nama: "Hitam", slug: "hitam", hex: "#1A1A1A", cetak: "putih" },
+  { nama: "Hijau Sage", slug: "hijau-sage", hex: "#6EB88F", cetak: "putih" },
+  { nama: "Merah", slug: "merah", hex: "#CE2225", cetak: "putih" },
+  { nama: "Merah Muda", slug: "merah-muda", hex: "#DB8D80", cetak: "putih" },
+  { nama: "Silver", slug: "silver", hex: "#C2C3C7", cetak: "biru" },
+] as const;
+
+const tumblerMiniFiles = import.meta.glob<string>(
+  "/src/assets/tumbler-mini-nempo-*-sisi-*.webp",
+  { eager: true, import: "default" },
+);
+const tumblerMiniSisi = (slug: string, sisi: "tulisan" | "logo") =>
+  tumblerMiniFiles[`/src/assets/tumbler-mini-nempo-${slug}-sisi-${sisi}.webp`] as string;
+
 type Spin = { src: string; angle: number }[];
 const pick = (all: string[], list: [number, number][]): Spin =>
   list.map(([i, angle]) => ({ src: all[i] as string, angle })).filter((f) => !!f.src);
@@ -46,7 +65,7 @@ const nempoSpin = pick(nempoFrames, [
   [13, 195], [15, 207], [14, 218], [16, 236], [17, 248], [18, 270], [19, 298], [21, 322], [22, 338], [23, 350],
 ]);
 
-const products: { name: string; frames?: Spin; bracelet?: boolean; lanyard?: boolean; notebook?: boolean; tumbler?: boolean; desc: string; features: string[] }[] = [
+const products: { name: string; frames?: Spin; bracelet?: boolean; lanyard?: boolean; notebook?: boolean; tumbler?: boolean; mini?: boolean; harga?: string; desc: string; features: string[] }[] = [
   {
     name: "Kaos Nempo × Kala Muda",
     frames: pick(kaosFrames, [[0, 0], [1, 25], [2, 50], [3, 90], [4, 135], [5, 155], [6, 180], [7, 225], [9, 270], [10, 315], [11, 340]]),
@@ -106,6 +125,13 @@ const products: { name: string; frames?: Spin; bracelet?: boolean; lanyard?: boo
     tumbler: true,
     desc: "Konsep tumbler stainless 600 ml berlapis navy doff, dengan gelombang gradasi biru-ungu melingkar di bagian bawah dan bibir gelas stainless mengilap.",
     features: ["Logo Nempo di depan, logo Kala Muda di belakang", "Gelombang gradasi biru-ungu melingkar", "Tutup dengan lubang minum dan pegangan besi lipat", "Lingkar tutup bergaris biru-ungu"],
+  },
+  {
+    name: "Tumbler Mini Nempo — Dua Sisi",
+    mini: true,
+    harga: "Rp70.000",
+    desc: "Konsep tumbler termos mini 330 ml dengan tutup motif kayu dan tali cokelat. Dua sisi cetak: tulisan nempo tegak di satu sisi, lambang \"n\" di sisi lainnya.",
+    features: ["330 ml", "UV Print", "2 Sisi", "Premium Stainless", "Tutup motif kayu elegan", "Tali pegangan"],
   },
 ];
 
@@ -236,6 +262,67 @@ function VestSpinner({ frames, name }: { frames: Spin; name: string }) {
   );
 }
 
+// Tumbler mini: dua foto (sisi tulisan & sisi logo) plus pilihan warna badan.
+// Bukan model 3D — satu foto tampil dalam satu waktu.
+function TumblerMiniViewer() {
+  const [warna, setWarna] = useState(0);
+  const [sisi, setSisi] = useState<"tulisan" | "logo">("tulisan");
+  const w = TUMBLER_MINI_WARNA[warna];
+  return (
+    <div className="merch-scene-light relative flex flex-col items-center gap-4 px-6 pb-6 pt-8">
+      <span aria-hidden className="merch-glow-light" />
+      <div className="merch-stage-light relative">
+        <img
+          src={tumblerMiniSisi(w.slug, sisi)}
+          alt={`Tumbler mini Nempo warna ${w.nama} — ${sisi === "tulisan" ? "sisi tulisan nempo tegak" : "sisi logo n"}`}
+          width={440}
+          height={980}
+          decoding="async"
+          draggable={false}
+          className="relative h-full w-full object-contain"
+        />
+        <span aria-hidden className="merch-shadow-light" />
+      </div>
+      <div className="relative z-[1] flex flex-wrap items-center justify-center gap-2">
+        {TUMBLER_MINI_WARNA.map((c, i) => (
+          <button
+            key={c.slug}
+            type="button"
+            aria-pressed={i === warna}
+            aria-label={`Warna ${c.nama}`}
+            title={c.nama}
+            onClick={() => setWarna(i)}
+            className={`h-7 w-7 rounded-full border border-[#182b39]/25 transition ${
+              i === warna ? "ring-2 ring-[#182b39] ring-offset-2 ring-offset-white" : "opacity-75 hover:opacity-100"
+            }`}
+            style={{ backgroundColor: c.hex }}
+          />
+        ))}
+      </div>
+      <div className="relative z-[1] flex gap-2">
+        {(["tulisan", "logo"] as const).map((s) => (
+          <Button
+            key={s}
+            type="button"
+            size="sm"
+            variant={s === sisi ? "default" : "outline"}
+            className="rounded-full"
+            aria-pressed={s === sisi}
+            onClick={() => setSisi(s)}
+          >
+            Sisi {s}
+          </Button>
+        ))}
+      </div>
+      {w.cetak === "biru" && (
+        <p className="relative z-[1] text-center text-[11px] leading-4 text-[#5f6b6f]">
+          Warna terang dicetak biru Nempo supaya tetap terbaca.
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function MerchandisePage() {
   return (
     <Layout>
@@ -253,7 +340,7 @@ export default function MerchandisePage() {
 
         {products.map((p) => (
         <article key={p.name} className="mt-8 overflow-hidden rounded-3xl border border-[#dce4fb] bg-white shadow-sm md:grid md:grid-cols-[1fr_1fr] md:items-stretch">
-          {p.tumbler ? <TumblerSpinner /> : p.notebook ? <NotebookSpinner /> : p.lanyard ? <LanyardSpinner /> : p.bracelet ? <BraceletSpinner /> : p.frames ? <VestSpinner frames={p.frames} name={p.name} /> : null}
+          {p.mini ? <TumblerMiniViewer /> : p.tumbler ? <TumblerSpinner /> : p.notebook ? <NotebookSpinner /> : p.lanyard ? <LanyardSpinner /> : p.bracelet ? <BraceletSpinner /> : p.frames ? <VestSpinner frames={p.frames} name={p.name} /> : null}
           <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
             <span className="w-fit rounded-full bg-[#182b39] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Tersedia</span>
             <h2 className="text-2xl font-black text-[#182b39]">{p.name}</h2>
@@ -261,6 +348,12 @@ export default function MerchandisePage() {
             <ul className="space-y-1.5 text-sm text-[#182b39]">
               {p.features.map((f) => <li key={f}>• {f}</li>)}
             </ul>
+            {p.harga && (
+              <p className="text-lg font-black text-[#182b39]">
+                {p.harga}
+                <span className="ml-1 text-xs font-semibold text-[#5f6b6f]">/ buah</span>
+              </p>
+            )}
             <div className="mt-2 flex flex-col gap-2 sm:flex-row">
               <Link href="/komunitas" className="inline-flex justify-center rounded-full bg-[#a62f78] px-5 py-3 text-sm font-bold text-white hover:bg-[#862761]">
                 Gabung Komunitas
@@ -279,6 +372,10 @@ export default function MerchandisePage() {
         .merch-float { position: absolute; inset: 0; }
         .merch-face { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none;  }
         .merch-shadow { position: absolute; left: 22%; right: 22%; bottom: 2%; height: 16px; border-radius: 50%; background: rgba(0,0,0,.55); filter: blur(8px); }
+        .merch-scene-light { position: relative; background: radial-gradient(120% 90% at 50% 18%, #ffffff 0%, #eef2fb 55%, #dbe4f6 100%); align-self: stretch; justify-content: center; }
+        .merch-glow-light { position: absolute; top: 16%; left: 50%; width: 66%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(120,90,190,.16), rgba(37,99,235,.08) 45%, transparent 70%); filter: blur(10px); }
+        .merch-stage-light { position: relative; width: min(58vw, 230px); aspect-ratio: 440 / 980; }
+        .merch-shadow-light { position: absolute; left: 18%; right: 18%; bottom: 1%; height: 14px; border-radius: 50%; background: rgba(24,43,57,.18); filter: blur(8px); }
       `}</style>
     </Layout>
   );

@@ -39,3 +39,5 @@
 - [ ] Pemasaran: publikasikan versi baru & arahkan nempogarut.com ke sini (domain live masih menampilkan "Nempo Feed", halaman layanan 404 di Google)
 
 - [x] Mockup tumbler NEMPO dua sisi (tulisan nempo tegak + logo n rapi)
+- [x] Merchandise: tumbler mini Nempo dua sisi — 7 pilihan warna bisa dipilih pembeli, harga Rp70.000
+- [x] Merchandise: keterangan tumbler mini pakai kata pengguna — 330 ml, UV Print, 2 Sisi, Premium Stainless, tutup motif kayu elegan, tali pegangan
