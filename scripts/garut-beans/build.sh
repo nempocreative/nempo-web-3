@@ -13,6 +13,8 @@ pnpm install --filter "@workspace/kopi-garut-web..." --ignore-scripts --frozen-l
 APP="$SRC/artifacts/kopi-garut-web"
 cp "$HERE/vite.nempo.config.ts" "$APP/vite.nempo.config.ts"
 cd "$APP"
+# Tidy fixes applied to the original source before building (see fixes.sh).
+bash "$HERE/fixes.sh" "$APP"
 GB_APP_ROOT="$APP" GB_SHIMS="$HERE/shims" NODE_ENV=production npx vite build --config vite.nempo.config.ts
 rm -rf "$ROOT/public/garut-beans"
 cp -R "$APP/dist/nempo" "$ROOT/public/garut-beans"

@@ -1,0 +1,26 @@
+/* NEMPO tidy fixes for Garut Beans — appended to src/pages/home-page.css by fixes.sh. */
+
+/* Card rows that scroll sideways cut their cards' soft shadows off at the row edge,
+   which shows as a flat grey box behind the cards. Give the shadows room to fade out. */
+.gb-home .gb-farmer-rail,
+.gb-home .gb-extension-rail,
+.gb-home .gb-region-rail,
+.gb-home .gb-event-rail {
+  margin: 0 -2px -40px;
+  padding: 1px 2px 46px;
+}
+
+/* On phones the Mini Games and Live Chat buttons sit over the page; keep them a little smaller. */
+@media (max-width: 699px) {
+  .floating-game-button,
+  .floating-support-button {
+    width: 52px;
+    height: 52px;
+  }
+
+  .floating-game-button img,
+  .floating-support-button img {
+    width: 48px;
+    height: 48px;
+  }
+}
