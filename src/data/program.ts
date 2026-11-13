@@ -1,3 +1,4 @@
+import mojangCover from "@/assets/mojang-priangan-dance.jpg";
 /** Browser-safe list of Nempo programs shown on /program. No access codes live here. */
 export type ProgramNempo = {
   slug: string;
@@ -47,6 +48,19 @@ export const PROGRAM_NEMPO: ProgramNempo[] = [
     sorotan: ["Katalog kopi Garut", "Cerita petani & wilayah", "Paket hadiah kopi", "Wisata kopi"],
     tautanWeb: "/garut-beans/",
     jenis: "Situs web",
+  },
+  {
+    slug: "mojang-priangan",
+    judul: "Pasanggiri Mojang Priangan 2027",
+    tagline: "Wirahma Wanoja — Menari, Merawat Tradisi, Menginspirasi Generasi",
+    ringkas: "Proposal lomba tari Sunda untuk mojang, sanggar, dan sekolah di Priangan: panggung karya, apresiasi seni, kelas gerak, dan kolaborasi budaya.",
+    mitra: "Nempo Garut",
+    tahun: "2027",
+    lokasi: "Priangan · Lokasi opsional",
+    sampul: mojangCover,
+    jumlahSlide: 24,
+    terkunci: true,
+    sorotan: ["Tari tunggal & kelompok", "Tradisi & kreasi Sunda", "Kelas gerak & ruang sanggar", "Kolaborasi brand & budaya"],
   },
 ];
 

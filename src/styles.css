@@ -2119,3 +2119,51 @@ html, body, #root {
 .psg-deck:fullscreen { display: flex; flex-direction: column; justify-content: center; }
 .psg-deck:fullscreen .psg-stage { width: min(100vw, calc(100dvh * 16 / 9)); border-radius: 0; box-shadow: none; }
 .psg-deck:fullscreen .psg-chrome { display: none; }
+
+/* Mojang Priangan: an isolated emerald, rose and gold editorial theme. */
+.mp-deck {
+  --background: #102a28;
+  --foreground: #f4f8f3;
+  --primary: #e6bd6b;
+  --primary-foreground: #102a28;
+  --primary-border: #e6bd6b;
+  --border: #3e6660;
+  --input: #3e6660;
+  --button-outline: #3e6660;
+  --ring: #e6bd6b;
+  --muted-foreground: #c0d2cd;
+  --mp-rose: #e991ae;
+  --mp-shade: #081b19;
+  --mp-shadow: 0 24px 60px -30px #081b19;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-psg-body);
+}
+.mp-gate { position: relative; overflow: hidden; min-height: 100dvh; background: var(--background); }
+.mp-gate-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
+.mp-gate-shade { position: absolute; inset: 0; background: linear-gradient(90deg, var(--mp-shade) 0%, color-mix(in srgb, var(--mp-shade) 92%, transparent) 30%, color-mix(in srgb, var(--mp-shade) 20%, transparent) 80%); }
+.mp-gate-content { display: flex; flex-direction: column; justify-content: center; min-height: min(760px, calc(100dvh - 110px)); padding-block: 40px; max-width: 650px; }
+.mp-stage { background: var(--background); border-radius: 6px; box-shadow: var(--mp-shadow); }
+.mp-slide-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.mp-photo-shade { position: absolute; inset: 0; background: linear-gradient(90deg, var(--mp-shade), color-mix(in srgb, var(--mp-shade) 93%, transparent) 32%, color-mix(in srgb, var(--mp-shade) 5%, transparent)); }
+.mp-slide-body { position: relative; padding: 4.4cqw 5.3cqw; height: 100%; }
+.mp-eyebrow { font-size: 1cqw; font-weight: 700; color: var(--mp-rose); margin-bottom: 2cqw; }
+.mp-slide-title { white-space: pre-line; font-family: var(--font-psg-display); font-size: 4.5cqw; line-height: 1.08; font-weight: 700; max-width: 85%; }
+.mp-cover-title { font-size: 6.2cqw; max-width: 60%; margin-top: 5cqw; }
+.mp-slide-intro { font-size: 1.48cqw; line-height: 1.55; max-width: 83%; margin-top: 2cqw; color: var(--muted-foreground); }
+.mp-items { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3cqw; margin-top: 3cqw; }
+.mp-item { border-top: 1px solid var(--border); padding-top: 1.4cqw; }
+.mp-item-number { font-size: 1cqw; font-weight: 700; color: var(--mp-rose); }
+.mp-item h2 { font-size: 1.75cqw; line-height: 1.2; font-weight: 700; color: var(--primary); margin-block: .8cqw; }
+.mp-item p { font-size: 1.3cqw; line-height: 1.5; color: var(--muted-foreground); }
+.mp-photo-slide .mp-slide-title { max-width: 59%; }
+.mp-photo-slide .mp-slide-intro { max-width: 46%; }
+.mp-photo-slide .mp-items { max-width: 47%; grid-template-columns: 1fr; gap: 1.3cqw; margin-top: 2cqw; }
+.mp-photo-slide .mp-item { padding-top: .8cqw; }
+.mp-photo-slide .mp-item-number { display: none; }
+.mp-photo-slide .mp-item h2 { font-size: 1.6cqw; margin-block: .5cqw; }
+.mp-photo-slide .mp-item p { font-size: 1.2cqw; }
+.mp-slide-footer { position: absolute; bottom: 1.5cqw; left: 5.3cqw; right: 5.3cqw; display: flex; justify-content: space-between; gap: 2cqw; font-size: .75cqw; color: var(--muted-foreground); border-top: 1px solid var(--border); padding-top: 1cqw; }
+.mp-full-controls { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+@media (max-width: 640px) { .mp-gate-shade { background: color-mix(in srgb, var(--mp-shade) 78%, transparent); } .mp-gate-photo { object-position: 60% center; } }
+@media print { .mp-deck .psg-chrome { display: none; } .mp-stage { width: 100%; box-shadow: none; } }
