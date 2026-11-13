@@ -37,3 +37,5 @@
 - [x] Favicon situs: latar kotak hitam dihapus, ikon jadi tembus pandang
 - [x] Pemasaran: riset & rencana tambah pengunjung ikut di repo (docs/marketing)
 - [ ] Pemasaran: publikasikan versi baru & arahkan nempogarut.com ke sini (domain live masih menampilkan "Nempo Feed", halaman layanan 404 di Google)
+
+- [x] Mockup tumbler NEMPO dua sisi (tulisan nempo tegak + logo n rapi)
