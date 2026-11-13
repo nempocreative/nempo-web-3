@@ -68,7 +68,7 @@ export default function ProgramPasarSeniPage() {
     <Layout minimalChrome hideBottomNav>
       <SEO
         title={program.judul}
-        description="Proposal kolaborasi Pasar Seni Garut 2027 — Nempo Garut × ESSE. Dibuka dengan kata sandi."
+        description="Proposal kolaborasi Pasar Seni Garut 2027 — Nempo Garut. Dibuka dengan kata sandi."
         path="/program/pasar-seni-garut"
         image={program.sampul}
         noIndex
