@@ -18,6 +18,12 @@
     height: 48px;
   }
 
+  .floating-actions .floating-game-motion,
+  .floating-actions .floating-support-motion {
+    width: 48px;
+    height: 48px;
+  }
+
   .floating-actions .floating-game-button img,
   .floating-actions .floating-support-button img {
     width: 44px;
