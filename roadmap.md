@@ -35,3 +35,5 @@
 - [x] Database: salinan lengkap database ikut di repo (database/nempo-database.sql + catatan cara pasang) — tinggal hubungkan GitHub di Project settings → Git
 - [x] Garut Beans: kata sandi 161616 untuk masuk webnya
 - [x] Favicon situs: latar kotak hitam dihapus, ikon jadi tembus pandang
+- [x] Pemasaran: riset & rencana tambah pengunjung ikut di repo (docs/marketing)
+- [ ] Pemasaran: publikasikan versi baru & arahkan nempogarut.com ke sini (domain live masih menampilkan "Nempo Feed", halaman layanan 404 di Google)
