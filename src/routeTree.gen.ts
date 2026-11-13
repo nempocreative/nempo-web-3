@@ -26,6 +26,7 @@ import { Route as ApiBackupRouteImport } from './routes/api/backup'
 import { Route as CmsIndexRouteImport } from './routes/cms.index'
 import { Route as CmsSplatRouteImport } from './routes/cms.$'
 import { Route as GarutBeansSplatRouteImport } from './routes/garut-beans.$'
+import { Route as ProgramMojangPrianganRouteImport } from './routes/program.mojang-priangan'
 import { Route as ProgramPasarSeniGarutRouteImport } from './routes/program.pasar-seni-garut'
 import { Route as YearBookEventRouteImport } from './routes/year-book.event'
 import { Route as YearBookGengGrupRouteImport } from './routes/year-book.geng-grup'
@@ -130,6 +131,11 @@ const GarutBeansSplatRoute = GarutBeansSplatRouteImport.update({
   id: '/$',
   path: '/$',
   getParentRoute: () => GarutBeansRoute,
+} as any)
+const ProgramMojangPrianganRoute = ProgramMojangPrianganRouteImport.update({
+  id: '/program/mojang-priangan',
+  path: '/program/mojang-priangan',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramPasarSeniGarutRoute = ProgramPasarSeniGarutRouteImport.update({
   id: '/program/pasar-seni-garut',
@@ -257,6 +263,7 @@ export interface FileRoutesByFullPath {
   '/api/backup': typeof ApiBackupRoute
   '/cms/$': typeof CmsSplatRoute
   '/garut-beans/$': typeof GarutBeansSplatRoute
+  '/program/mojang-priangan': typeof ProgramMojangPrianganRoute
   '/program/pasar-seni-garut': typeof ProgramPasarSeniGarutRoute
   '/year-book/event': typeof YearBookEventRoute
   '/year-book/geng-grup': typeof YearBookGengGrupRoute
@@ -295,6 +302,7 @@ export interface FileRoutesByTo {
   '/api/backup': typeof ApiBackupRoute
   '/cms/$': typeof CmsSplatRoute
   '/garut-beans/$': typeof GarutBeansSplatRoute
+  '/program/mojang-priangan': typeof ProgramMojangPrianganRoute
   '/program/pasar-seni-garut': typeof ProgramPasarSeniGarutRoute
   '/year-book/event': typeof YearBookEventRoute
   '/year-book/geng-grup': typeof YearBookGengGrupRoute
@@ -334,6 +342,7 @@ export interface FileRoutesById {
   '/api/backup': typeof ApiBackupRoute
   '/cms/$': typeof CmsSplatRoute
   '/garut-beans/$': typeof GarutBeansSplatRoute
+  '/program/mojang-priangan': typeof ProgramMojangPrianganRoute
   '/program/pasar-seni-garut': typeof ProgramPasarSeniGarutRoute
   '/year-book/event': typeof YearBookEventRoute
   '/year-book/geng-grup': typeof YearBookGengGrupRoute
@@ -374,6 +383,7 @@ export interface FileRouteTypes {
     | '/api/backup'
     | '/cms/$'
     | '/garut-beans/$'
+    | '/program/mojang-priangan'
     | '/program/pasar-seni-garut'
     | '/year-book/event'
     | '/year-book/geng-grup'
@@ -412,6 +422,7 @@ export interface FileRouteTypes {
     | '/api/backup'
     | '/cms/$'
     | '/garut-beans/$'
+    | '/program/mojang-priangan'
     | '/program/pasar-seni-garut'
     | '/year-book/event'
     | '/year-book/geng-grup'
@@ -450,6 +461,7 @@ export interface FileRouteTypes {
     | '/api/backup'
     | '/cms/$'
     | '/garut-beans/$'
+    | '/program/mojang-priangan'
     | '/program/pasar-seni-garut'
     | '/year-book/event'
     | '/year-book/geng-grup'
@@ -488,6 +500,7 @@ export interface RootRouteChildren {
   ApiSplatRoute: typeof ApiSplatRoute
   ApiBackupRoute: typeof ApiBackupRoute
   CmsSplatRoute: typeof CmsSplatRoute
+  ProgramMojangPrianganRoute: typeof ProgramMojangPrianganRoute
   ProgramPasarSeniGarutRoute: typeof ProgramPasarSeniGarutRoute
   YearBookEventRoute: typeof YearBookEventRoute
   YearBookGengGrupRoute: typeof YearBookGengGrupRoute
@@ -617,6 +630,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/garut-beans/$'
       preLoaderRoute: typeof GarutBeansSplatRouteImport
       parentRoute: typeof GarutBeansRoute
+    }
+    '/program/mojang-priangan': {
+      id: '/program/mojang-priangan'
+      path: '/program/mojang-priangan'
+      fullPath: '/program/mojang-priangan'
+      preLoaderRoute: typeof ProgramMojangPrianganRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/program/pasar-seni-garut': {
       id: '/program/pasar-seni-garut'
@@ -824,6 +844,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiSplatRoute: ApiSplatRoute,
   ApiBackupRoute: ApiBackupRoute,
   CmsSplatRoute: CmsSplatRoute,
+  ProgramMojangPrianganRoute: ProgramMojangPrianganRoute,
   ProgramPasarSeniGarutRoute: ProgramPasarSeniGarutRoute,
   YearBookEventRoute: YearBookEventRoute,
   YearBookGengGrupRoute: YearBookGengGrupRoute,
