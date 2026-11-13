@@ -32,3 +32,6 @@
 - [x] Garut Beans: perapihan lanjutan — jarak beranda/tablet, akses bantuan di bawah halaman, keterangan akun demo, domba PNG khusus iPad
 - [ ] Garut Beans: pastikan kotak putih domba hilang pada iPad pengguna — menunggu pemeriksaan perangkat, Safari pengujian tidak dapat membuka halaman
 - [ ] Garut Beans: akun pembeli (poin & voucher) belum tersambung — menunggu keputusan pemilik
+- [x] Database: salinan lengkap database ikut di repo (database/nempo-database.sql + catatan cara pasang) — tinggal hubungkan GitHub di Project settings → Git
+- [x] Garut Beans: kata sandi 161616 untuk masuk webnya
+- [x] Favicon situs: latar kotak hitam dihapus, ikon jadi tembus pandang

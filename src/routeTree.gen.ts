@@ -33,6 +33,7 @@ import { Route as YearBookGengGrupRouteImport } from './routes/year-book.geng-gr
 import { Route as YearBookKomunitasRouteImport } from './routes/year-book.komunitas'
 import { Route as YearBookOrganisasiRouteImport } from './routes/year-book.organisasi'
 import { Route as YearBookUcapanSpesialRouteImport } from './routes/year-book.ucapan-spesial'
+import { Route as ApiPublicGarutBeansUnlockRouteImport } from './routes/api/public/garut-beans-unlock'
 import { Route as WeddingInvitationTemaBiruTamanRouteImport } from './routes/wedding-invitation.tema.biru-taman'
 import { Route as WeddingInvitationTemaBiruTamanTanpaFotoRouteImport } from './routes/wedding-invitation.tema.biru-taman-tanpa-foto'
 import { Route as WeddingInvitationTemaHitamMewahRouteImport } from './routes/wedding-invitation.tema.hitam-mewah'
@@ -167,6 +168,12 @@ const YearBookUcapanSpesialRoute = YearBookUcapanSpesialRouteImport.update({
   path: '/year-book/ucapan-spesial',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicGarutBeansUnlockRoute =
+  ApiPublicGarutBeansUnlockRouteImport.update({
+    id: '/api/public/garut-beans-unlock',
+    path: '/api/public/garut-beans-unlock',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WeddingInvitationTemaBiruTamanRoute =
   WeddingInvitationTemaBiruTamanRouteImport.update({
     id: '/tema/biru-taman',
@@ -271,6 +278,7 @@ export interface FileRoutesByFullPath {
   '/year-book/organisasi': typeof YearBookOrganisasiRoute
   '/year-book/ucapan-spesial': typeof YearBookUcapanSpesialRoute
   '/cms/': typeof CmsIndexRoute
+  '/api/public/garut-beans-unlock': typeof ApiPublicGarutBeansUnlockRoute
   '/wedding-invitation/tema/biru-taman': typeof WeddingInvitationTemaBiruTamanRoute
   '/wedding-invitation/tema/biru-taman-tanpa-foto': typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
@@ -310,6 +318,7 @@ export interface FileRoutesByTo {
   '/year-book/organisasi': typeof YearBookOrganisasiRoute
   '/year-book/ucapan-spesial': typeof YearBookUcapanSpesialRoute
   '/cms': typeof CmsIndexRoute
+  '/api/public/garut-beans-unlock': typeof ApiPublicGarutBeansUnlockRoute
   '/wedding-invitation/tema/biru-taman': typeof WeddingInvitationTemaBiruTamanRoute
   '/wedding-invitation/tema/biru-taman-tanpa-foto': typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
@@ -350,6 +359,7 @@ export interface FileRoutesById {
   '/year-book/organisasi': typeof YearBookOrganisasiRoute
   '/year-book/ucapan-spesial': typeof YearBookUcapanSpesialRoute
   '/cms/': typeof CmsIndexRoute
+  '/api/public/garut-beans-unlock': typeof ApiPublicGarutBeansUnlockRoute
   '/wedding-invitation/tema/biru-taman': typeof WeddingInvitationTemaBiruTamanRoute
   '/wedding-invitation/tema/biru-taman-tanpa-foto': typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
@@ -391,6 +401,7 @@ export interface FileRouteTypes {
     | '/year-book/organisasi'
     | '/year-book/ucapan-spesial'
     | '/cms/'
+    | '/api/public/garut-beans-unlock'
     | '/wedding-invitation/tema/biru-taman'
     | '/wedding-invitation/tema/biru-taman-tanpa-foto'
     | '/wedding-invitation/tema/hitam-mewah'
@@ -430,6 +441,7 @@ export interface FileRouteTypes {
     | '/year-book/organisasi'
     | '/year-book/ucapan-spesial'
     | '/cms'
+    | '/api/public/garut-beans-unlock'
     | '/wedding-invitation/tema/biru-taman'
     | '/wedding-invitation/tema/biru-taman-tanpa-foto'
     | '/wedding-invitation/tema/hitam-mewah'
@@ -469,6 +481,7 @@ export interface FileRouteTypes {
     | '/year-book/organisasi'
     | '/year-book/ucapan-spesial'
     | '/cms/'
+    | '/api/public/garut-beans-unlock'
     | '/wedding-invitation/tema/biru-taman'
     | '/wedding-invitation/tema/biru-taman-tanpa-foto'
     | '/wedding-invitation/tema/hitam-mewah'
@@ -508,6 +521,7 @@ export interface RootRouteChildren {
   YearBookOrganisasiRoute: typeof YearBookOrganisasiRoute
   YearBookUcapanSpesialRoute: typeof YearBookUcapanSpesialRoute
   CmsIndexRoute: typeof CmsIndexRoute
+  ApiPublicGarutBeansUnlockRoute: typeof ApiPublicGarutBeansUnlockRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -678,6 +692,13 @@ declare module '@tanstack/react-router' {
       path: '/year-book/ucapan-spesial'
       fullPath: '/year-book/ucapan-spesial'
       preLoaderRoute: typeof YearBookUcapanSpesialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/garut-beans-unlock': {
+      id: '/api/public/garut-beans-unlock'
+      path: '/api/public/garut-beans-unlock'
+      fullPath: '/api/public/garut-beans-unlock'
+      preLoaderRoute: typeof ApiPublicGarutBeansUnlockRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/wedding-invitation/tema/biru-taman': {
@@ -852,6 +873,7 @@ const rootRouteChildren: RootRouteChildren = {
   YearBookOrganisasiRoute: YearBookOrganisasiRoute,
   YearBookUcapanSpesialRoute: YearBookUcapanSpesialRoute,
   CmsIndexRoute: CmsIndexRoute,
+  ApiPublicGarutBeansUnlockRoute: ApiPublicGarutBeansUnlockRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
