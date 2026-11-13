@@ -12,15 +12,26 @@
 
 /* On phones the Mini Games and Live Chat buttons sit over the page; keep them a little smaller. */
 @media (max-width: 699px) {
-  .floating-game-button,
-  .floating-support-button {
-    width: 52px;
-    height: 52px;
-  }
-
-  .floating-game-button img,
-  .floating-support-button img {
+  .floating-actions .floating-game-button,
+  .floating-actions .floating-support-button {
     width: 48px;
     height: 48px;
   }
+
+  .floating-actions .floating-game-button img,
+  .floating-actions .floating-support-button img {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Tuck them against the screen edges so they cover less of the page text. */
+  .floating-actions .floating-game-button { left: 6px; }
+  .floating-actions .floating-support-button { right: 6px; }
+}
+
+/* The Mitra page has a max width with auto side margins, so it shrank to its widest line
+   (about 1150px) and pushed the header buttons, cards and text off the right edge. */
+main.partnership-page {
+  width: 100%;
+  min-width: 0;
 }
