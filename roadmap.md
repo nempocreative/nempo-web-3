@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Program: proposal Pasanggiri Mojang Priangan — judul, tema, slide lomba tari, dan kartu Program
+
 - [x] Portofolio contoh untuk kategori Momen Digital (seperti yearbook):
   - [x] Kelas — halaman contoh di /year-book/kelas, kartu kategori sudah aktif
   - [x] Geng & Grup — /year-book/geng-grup: profil anggota, cerita, galeri, playlist, dan pesan
