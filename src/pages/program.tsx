@@ -18,9 +18,9 @@ function InfoProgram({ p }: { p: ProgramNempo }) {
       {info.map(({ Icon, label, value }) => (
         <div key={label} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5">
           <dt className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">
-            <Icon className="h-3 w-3" /> {label}
+            <Icon className="h-3 w-3 shrink-0" /> {label}
           </dt>
-          <dd className="mt-1 truncate text-[13px] font-semibold text-[#17233a]">{value}</dd>
+          <dd className="mt-1 break-words text-[13px] font-semibold leading-snug text-[#17233a]">{value}</dd>
         </div>
       ))}
     </dl>
