@@ -1,4 +1,5 @@
 import mojangCover from "@/assets/mojang-priangan-dance.jpg";
+import { MOJANG_SLIDES } from "@/program/mojang-priangan/content";
 /** Browser-safe list of Nempo programs shown on /program. No access codes live here. */
 export type ProgramNempo = {
   slug: string;
@@ -53,14 +54,14 @@ export const PROGRAM_NEMPO: ProgramNempo[] = [
     slug: "mojang-priangan",
     judul: "Pasanggiri Mojang Priangan 2027",
     tagline: "Wirahma Wanoja — Menari, Merawat Tradisi, Menginspirasi Generasi",
-    ringkas: "Proposal lomba tari Sunda untuk mojang, sanggar, dan sekolah di Priangan: panggung karya, apresiasi seni, kelas gerak, dan kolaborasi budaya.",
+    ringkas: "Proposal lengkap lomba tari Sunda 2027: konsep budaya, petunjuk peserta, penilaian, pelaksanaan, simulasi anggaran, paket sponsor, dan laporan mitra.",
     mitra: "Nempo Garut",
     tahun: "2027",
     lokasi: "Priangan · Lokasi opsional",
     sampul: mojangCover,
-    jumlahSlide: 24,
+    jumlahSlide: MOJANG_SLIDES.length,
     terkunci: true,
-    sorotan: ["Tari tunggal & kelompok", "Tradisi & kreasi Sunda", "Kelas gerak & ruang sanggar", "Kolaborasi brand & budaya"],
+    sorotan: ["Tari tunggal & kelompok", "Petunjuk peserta & penilaian", "RAB & paket sponsor", "Pelaksanaan & laporan mitra"],
   },
 ];
 
