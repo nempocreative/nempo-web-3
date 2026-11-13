@@ -7,7 +7,8 @@ import { LanyardSpinner } from "@/components/lanyard-spinner";
 import { NotebookSpinner } from "@/components/notebook-spinner";
 import { TumblerSpinner } from "@/components/tumbler-spinner";
 import { Button } from "@/components/ui/button";
-import { Pause, Play } from "lucide-react";
+import { MessageCircle, Pause, Play } from "lucide-react";
+import { pesanMerchWaUrl } from "@/lib/merch-order";
 
 import { spinState } from "@/lib/spin-frames";
 
@@ -264,24 +265,21 @@ function VestSpinner({ frames, name }: { frames: Spin; name: string }) {
 
 // Tumbler mini: dua foto (sisi tulisan & sisi logo) plus pilihan warna badan.
 // Bukan model 3D — satu foto tampil dalam satu waktu.
-function TumblerMiniViewer() {
-  const [warna, setWarna] = useState(0);
+function TumblerMiniViewer({ warna, setWarna }: { warna: number; setWarna: (i: number) => void }) {
   const [sisi, setSisi] = useState<"tulisan" | "logo">("tulisan");
   const w = TUMBLER_MINI_WARNA[warna];
   return (
-    <div className="merch-scene-light relative flex flex-col items-center gap-4 px-6 pb-6 pt-8">
-      <span aria-hidden className="merch-glow-light" />
-      <div className="merch-stage-light relative">
+    <div className="merch-scene-mini relative flex flex-col items-center gap-4 px-6 pb-6 pt-6">
+      <div className="merch-stage-mini relative">
         <img
           src={tumblerMiniSisi(w.slug, sisi)}
           alt={`Tumbler mini Nempo warna ${w.nama} — ${sisi === "tulisan" ? "sisi tulisan nempo tegak" : "sisi logo n"}`}
-          width={440}
-          height={980}
+          width={702}
+          height={1472}
           decoding="async"
           draggable={false}
-          className="relative h-full w-full object-contain"
+          className="h-full w-full object-cover"
         />
-        <span aria-hidden className="merch-shadow-light" />
       </div>
       <div className="relative z-[1] flex flex-wrap items-center justify-center gap-2">
         {TUMBLER_MINI_WARNA.map((c, i) => (
@@ -324,6 +322,7 @@ function TumblerMiniViewer() {
 }
 
 export default function MerchandisePage() {
+  const [miniWarna, setMiniWarna] = useState(0);
   return (
     <Layout>
       <SEO title="Merchandise Komunitas Kala Muda" noIndex />
@@ -340,7 +339,7 @@ export default function MerchandisePage() {
 
         {products.map((p) => (
         <article key={p.name} className="mt-8 overflow-hidden rounded-3xl border border-[#dce4fb] bg-white shadow-sm md:grid md:grid-cols-[1fr_1fr] md:items-stretch">
-          {p.mini ? <TumblerMiniViewer /> : p.tumbler ? <TumblerSpinner /> : p.notebook ? <NotebookSpinner /> : p.lanyard ? <LanyardSpinner /> : p.bracelet ? <BraceletSpinner /> : p.frames ? <VestSpinner frames={p.frames} name={p.name} /> : null}
+          {p.mini ? <TumblerMiniViewer warna={miniWarna} setWarna={setMiniWarna} /> : p.tumbler ? <TumblerSpinner /> : p.notebook ? <NotebookSpinner /> : p.lanyard ? <LanyardSpinner /> : p.bracelet ? <BraceletSpinner /> : p.frames ? <VestSpinner frames={p.frames} name={p.name} /> : null}
           <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
             <span className="w-fit rounded-full bg-[#182b39] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Tersedia</span>
             <h2 className="text-2xl font-black text-[#182b39]">{p.name}</h2>
@@ -355,6 +354,17 @@ export default function MerchandisePage() {
               </p>
             )}
             <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+              {p.harga && (
+                <a
+                  href={pesanMerchWaUrl({ nama: p.name, harga: p.harga, ...(p.mini ? { warna: TUMBLER_MINI_WARNA[miniWarna].nama } : {}) })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1f8f4e] px-5 py-3 text-sm font-bold text-white hover:bg-[#18733e]"
+                >
+                  <MessageCircle className="h-4 w-4" aria-hidden />
+                  Pesan via WhatsApp
+                </a>
+              )}
               <Link href="/komunitas" className="inline-flex justify-center rounded-full bg-[#a62f78] px-5 py-3 text-sm font-bold text-white hover:bg-[#862761]">
                 Gabung Komunitas
               </Link>
@@ -372,10 +382,8 @@ export default function MerchandisePage() {
         .merch-float { position: absolute; inset: 0; }
         .merch-face { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none;  }
         .merch-shadow { position: absolute; left: 22%; right: 22%; bottom: 2%; height: 16px; border-radius: 50%; background: rgba(0,0,0,.55); filter: blur(8px); }
-        .merch-scene-light { position: relative; background: radial-gradient(120% 90% at 50% 18%, #ffffff 0%, #eef2fb 55%, #dbe4f6 100%); align-self: stretch; justify-content: center; }
-        .merch-glow-light { position: absolute; top: 16%; left: 50%; width: 66%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(120,90,190,.16), rgba(37,99,235,.08) 45%, transparent 70%); filter: blur(10px); }
-        .merch-stage-light { position: relative; width: min(58vw, 230px); aspect-ratio: 440 / 980; }
-        .merch-shadow-light { position: absolute; left: 18%; right: 18%; bottom: 1%; height: 14px; border-radius: 50%; background: rgba(24,43,57,.18); filter: blur(8px); }
+        .merch-scene-mini { position: relative; background: #e8ebf5; align-self: stretch; justify-content: center; }
+        .merch-stage-mini { position: relative; width: min(66vw, 260px); aspect-ratio: 702 / 1472; -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 2%, #000 97%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 2%, #000 97%, transparent); mask-composite: intersect; }
       `}</style>
     </Layout>
   );
