@@ -6,11 +6,11 @@ describe("Mojang Priangan proposal", () => {
     const program = cariProgram("mojang-priangan");
     expect(program?.terkunci).toBe(true);
     expect(program?.jumlahSlide).toBe(MOJANG_SLIDES.length);
-    expect(MOJANG_SLIDES.length).toBe(43);
+    expect(MOJANG_SLIDES.length).toBe(42);
   });
   it("keeps navigation within the new deck", () => {
     expect(geserSlideProgram(0, -1, MOJANG_SLIDES.length)).toBe(0);
-    expect(geserSlideProgram(42, 1, MOJANG_SLIDES.length)).toBe(42);
+    expect(geserSlideProgram(41, 1, MOJANG_SLIDES.length)).toBe(41);
     expect(geserSlideProgram(0, 1, MOJANG_SLIDES.length)).toBe(1);
   });
   it("plans the dance competition for 2027", () => {
