@@ -30,6 +30,9 @@ grep -q "window.innerWidth < 700 && window.scrollY < 480" "$APP_TSX" || { echo "
 # video there) and has white wool holes. Use the re-cut animated WebP instead (see mascot-rekey.py);
 # a still frame shows when the visitor prefers reduced motion.
 cp "$(dirname "$0")/assets/kopi-menari-home-mascot.webp" "$(dirname "$0")/assets/kopi-menari-home-mascot-still.webp" "$(dirname "$0")/assets/domba-garut-ipad-v2.png" "$APP/public/assets/"
+
+# The upstream favicon is a plain orange square; use the Garut Beans bean logo instead.
+cp "$(dirname "$0")/assets/favicon.svg" "$APP/public/favicon.svg"
 HOME_TSX="$APP/src/pages/home-page.tsx"
 python3 - "$HOME_TSX" <<'PY'
 import re, sys
